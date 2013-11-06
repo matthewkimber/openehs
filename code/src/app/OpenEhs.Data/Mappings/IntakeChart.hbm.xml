@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="OpenEhs.Domain"
+                   namespace="OpenEhs.Domain">
+
+  <class name="IntakeChart" table="IntakeChart">
+    <id name="Id" column="IntakeChartID">
+      <generator class="native" />
+    </id>
+    <property name="ChartTime" not-null="true" length="50" />
+    <property name="KindOfFluid" not-null="false" length="50" />
+    <property name="Amount" not-null="true" length="30" />
+
+    <many-to-one name="PatientCheckIn"
+                class="PatientCheckIn"
+                unique="true"
+                column="PatientCheckInID" />
+
+  </class>
+</hibernate-mapping>

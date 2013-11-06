@@ -1,0 +1,30 @@
+﻿#linksContainer {
+    width: 800px;
+    font-size: 15px;
+    font-weight: bold;
+    -moz-border-radius: 10px 10px 10px 10px;
+    margin: 20px auto 0 auto;
+}
+
+#links {
+    text-align: center;
+}
+
+#links li {
+    background-repeat: no-repeat;
+    height: 35px;
+    margin: 0.2em 0em 0.2em 0;
+    padding: 0.4em 0 0.4em 0;
+    -moz-border-radius: 10px 10px 10px 10px;
+}
+
+#links li a:hover {
+    border-bottom: 1px solid #89C6FF;
+}
+
+#links li a {
+    border: medium none;
+    color: #89C6FF;
+    font-size: 2em;
+    text-decoration: none;
+}

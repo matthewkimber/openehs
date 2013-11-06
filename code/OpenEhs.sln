@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{08F3D030-DEA3-4542-92DB-E322A169F333}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{634B7C0D-518D-4D32-BDF0-8335B32B590F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenEhs.Web.Tests", "src\tests\OpenEhs.Web.Tests\OpenEhs.Web.Tests.csproj", "{EEF2D502-CDEF-4B26-B83F-66F07694E1E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{9C50DA22-C175-47B2-9862-A6B4F5D4FD00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenEhs.Data", "src\app\OpenEhs.Data\OpenEhs.Data.csproj", "{7501A878-FBE8-444D-9884-B4237DF11207}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{E914149B-71A6-406B-B08E-82B3823641AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{F1FD6ECE-3FB5-4461-8037-EB7255E0F589}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenEhs.Domain", "src\app\OpenEhs.Domain\OpenEhs.Domain.csproj", "{9F0827C4-FFAE-4B13-9736-012A13662D90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenEhs.Data.Tests", "src\tests\OpenEhs.Data.Tests\OpenEhs.Data.Tests.csproj", "{4770CE23-624E-4DC2-9F61-09FA7DC04549}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenEhs.Domain.Tests", "src\tests\OpenEhs.Domain.Tests\OpenEhs.Domain.Tests.csproj", "{78BFCAC9-E6EA-4DAC-B66F-72BFF5388282}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenEhs.Infrastructure.Logging", "src\app\OpenEhs.Infrastructure.Logging\OpenEhs.Infrastructure.Logging.csproj", "{9F638D35-2A4F-4E49-BC3D-A84F8B4A81E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenEhs.Infrastructure.Security", "src\app\OpenEhs.Infrastructure.Security\OpenEhs.Infrastructure.Security.csproj", "{7FA944BF-57F8-4D8D-B02A-9F4E4D9CA7D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenEhs.Web", "src\app\OpenEhs.Web\OpenEhs.Web.csproj", "{0D8E6BC1-5D8F-4900-9845-772A3FAC193C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9526FF88-CF30-45E1-A888-52B9A386BB46}"
+	ProjectSection(SolutionItems) = preProject
+		sql\OpenEHS Database Full Script.sql = sql\OpenEHS Database Full Script.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEF2D502-CDEF-4B26-B83F-66F07694E1E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEF2D502-CDEF-4B26-B83F-66F07694E1E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEF2D502-CDEF-4B26-B83F-66F07694E1E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEF2D502-CDEF-4B26-B83F-66F07694E1E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7501A878-FBE8-444D-9884-B4237DF11207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7501A878-FBE8-444D-9884-B4237DF11207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7501A878-FBE8-444D-9884-B4237DF11207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7501A878-FBE8-444D-9884-B4237DF11207}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F0827C4-FFAE-4B13-9736-012A13662D90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F0827C4-FFAE-4B13-9736-012A13662D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F0827C4-FFAE-4B13-9736-012A13662D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F0827C4-FFAE-4B13-9736-012A13662D90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4770CE23-624E-4DC2-9F61-09FA7DC04549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4770CE23-624E-4DC2-9F61-09FA7DC04549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4770CE23-624E-4DC2-9F61-09FA7DC04549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4770CE23-624E-4DC2-9F61-09FA7DC04549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78BFCAC9-E6EA-4DAC-B66F-72BFF5388282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78BFCAC9-E6EA-4DAC-B66F-72BFF5388282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78BFCAC9-E6EA-4DAC-B66F-72BFF5388282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78BFCAC9-E6EA-4DAC-B66F-72BFF5388282}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F638D35-2A4F-4E49-BC3D-A84F8B4A81E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F638D35-2A4F-4E49-BC3D-A84F8B4A81E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F638D35-2A4F-4E49-BC3D-A84F8B4A81E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F638D35-2A4F-4E49-BC3D-A84F8B4A81E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FA944BF-57F8-4D8D-B02A-9F4E4D9CA7D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FA944BF-57F8-4D8D-B02A-9F4E4D9CA7D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FA944BF-57F8-4D8D-B02A-9F4E4D9CA7D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FA944BF-57F8-4D8D-B02A-9F4E4D9CA7D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D8E6BC1-5D8F-4900-9845-772A3FAC193C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D8E6BC1-5D8F-4900-9845-772A3FAC193C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D8E6BC1-5D8F-4900-9845-772A3FAC193C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D8E6BC1-5D8F-4900-9845-772A3FAC193C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0D8E6BC1-5D8F-4900-9845-772A3FAC193C} = {08F3D030-DEA3-4542-92DB-E322A169F333}
+		{EEF2D502-CDEF-4B26-B83F-66F07694E1E9} = {634B7C0D-518D-4D32-BDF0-8335B32B590F}
+		{4770CE23-624E-4DC2-9F61-09FA7DC04549} = {634B7C0D-518D-4D32-BDF0-8335B32B590F}
+		{78BFCAC9-E6EA-4DAC-B66F-72BFF5388282} = {634B7C0D-518D-4D32-BDF0-8335B32B590F}
+		{7501A878-FBE8-444D-9884-B4237DF11207} = {9C50DA22-C175-47B2-9862-A6B4F5D4FD00}
+		{9F638D35-2A4F-4E49-BC3D-A84F8B4A81E0} = {E914149B-71A6-406B-B08E-82B3823641AB}
+		{7FA944BF-57F8-4D8D-B02A-9F4E4D9CA7D5} = {E914149B-71A6-406B-B08E-82B3823641AB}
+		{9F0827C4-FFAE-4B13-9736-012A13662D90} = {F1FD6ECE-3FB5-4461-8037-EB7255E0F589}
+	EndGlobalSection
+EndGlobal

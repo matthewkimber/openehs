@@ -1,0 +1,60 @@
+﻿#openCheckIns {
+    width: 500px;
+    margin-left: 220px;
+    margin-top: 50px;
+}
+        
+#openCheckIns p {
+    margin-left: 40px;
+}
+        
+#openCheckIns input {
+    margin-top: 3px;
+    margin-left: 20px;
+    height: 25;
+    width: 120px;
+    font-size: 14px;
+    margin-right: 50px;
+}
+        
+#openCheckIns fieldset {
+    border-width: medium;
+	width: 500px;
+}
+        
+#openCheckIns fieldset legend {
+    font-size: 15px;
+    font-weight: bold;
+}
+        
+#openCheckInSelect {
+    margin-top: 5px;
+    margin-left: 10px;
+    height: 25px;
+    font-size: 14px;
+}
+        
+#openCheckinsList table {
+    width: 400px;
+    margin-top: 20px;
+    margin-left: 36px;
+}
+        
+#openCheckinsList table td, #RecentlyAccessedList table th {
+    padding: 10px;
+}
+        
+#openCheckinsList table tr:hover {
+    background-color: #c0e0ff;
+}
+        
+#openCheckinsList table td {
+    cursor: pointer;
+}
+
+#CreatePatientButton 
+{
+    font-size: 2.6em;
+    width: 300px;
+    padding: 20px 0;
+}

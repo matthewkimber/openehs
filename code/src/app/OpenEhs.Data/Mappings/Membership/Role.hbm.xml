@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="OpenEhs.Domain"
+                   namespace="OpenEhs.Domain">
+  <class name="Role" table="role">
+    <id name="Id" column="RoleID">
+      <generator class="native" />
+    </id>
+    <property name="Name" not-null="true" length="30" />
+    <property name="Description" not-null="false" length="255" />
+    <property name="DateCreated" not-null="true" />
+
+    <bag name="Users" table="UserRole" inverse="true">
+      <key column="RoleID" />
+      <many-to-many class="User" column="UserID" />
+    </bag>
+  </class>
+</hibernate-mapping>

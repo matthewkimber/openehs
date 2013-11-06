@@ -1,0 +1,60 @@
+<mockup version="1.0" skin="sketch" measuredW="887" measuredH="459" mockupW="450" mockupH="400">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="427" y="49" w="-1" h="-1" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <close>true</close>
+        <maximizeRestore>true</maximizeRestore>
+        <minimize>true</minimize>
+        <text>MLKMC%20-%20Login</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::HRule" x="442" y="84" w="420" h="-1" measuredW="100" measuredH="5" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Image" x="490" y="171" w="324" h="121" measuredW="327" measuredH="157" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>square</borderStyle>
+        <filter>true</filter>
+        <src>./beach.jpg</src>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::HRule" x="442" y="119" w="420" h="-1" measuredW="100" measuredH="5" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="442" y="89" w="-1" h="-1" measuredW="44" measuredH="29" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Login</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="514" y="327" w="-1" h="-1" measuredW="71" measuredH="25" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Username%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="518" y="359" w="-1" h="-1" measuredW="67" measuredH="25" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Password%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::TextInput" x="585" y="326" w="94" h="-1" measuredW="79" measuredH="29" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::TextInput" x="585" y="358" w="94" h="-1" measuredW="79" measuredH="29" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Button" x="685" y="344" w="-1" h="-1" measuredW="55" measuredH="28" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>FrontDesk_Home%26bm%3BFrontDesk_Home.bmml%26bm%3BFrontDesk_Home.bmml%26bm%3BFrontDesk_Home.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22258%2C295%2C313%2C323%22%20href%3D%22FrontDesk_Home.bmml%22%20alt%3D%22FrontDesk_Home%22%20id%3D%2210%22/%3E</map>
+        <text>Login</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Label" x="499" y="139" w="-1" h="-1" measuredW="305" measuredH="32" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Martin%20Luther%20King%20Memorial%20Clinic</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

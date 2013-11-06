@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="OpenEhs.Domain"
+                   namespace="OpenEhs.Domain">
+
+  <class name="PatientMedication" table="PatientMedication">
+    <id name="Id" column="PatientMedicationID">
+      <generator class="native" />
+    </id>
+
+    <many-to-one name="Patient" column="PatientID" unique="true" cascade="all" />
+    <many-to-one name="Medication" column="MedicationID" unique="true" cascade="all" />
+    <property name="StartDate" not-null="true" />
+    <property name="ExpDate" not-null="true" />
+    <property name="Instruction" not-null="false" length="255" />
+    <property name="Dose" not-null="true" length="15" />
+    <property name="Frequency" not-null="true" length="20" />
+    <property name="Administration" not-null="true"  />
+
+  </class>
+</hibernate-mapping>

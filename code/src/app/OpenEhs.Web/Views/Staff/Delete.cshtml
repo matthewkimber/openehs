@@ -1,0 +1,38 @@
+﻿@model OpenEhs.Domain.Staff
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Staff</legend>
+
+    <div class="display-label">FirstName</div>
+    <div class="display-field">@Model.FirstName</div>
+
+    <div class="display-label">MiddleName</div>
+    <div class="display-field">@Model.MiddleName</div>
+
+    <div class="display-label">LastName</div>
+    <div class="display-field">@Model.LastName</div>
+
+    <div class="display-label">PhoneNumber</div>
+    <div class="display-field">@Model.PhoneNumber</div>
+
+    <div class="display-label">LicenseNumber</div>
+    <div class="display-field">@Model.LicenseNumber</div>
+
+    <div class="display-label">IsActive</div>
+    <div class="display-field">@Model.IsActive</div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
+
+

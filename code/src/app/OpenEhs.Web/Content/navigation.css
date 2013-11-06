@@ -1,0 +1,81 @@
+#nav {
+    background: -moz-linear-gradient(top, #cecece, #a7a7a7);
+    background: -webkit-gradient(
+                    linear,
+                    left top,
+                    left bottom,
+                    color-stop(0, #cecece),
+                    color-stop(1, #a7a7a7)
+                );
+    height: 82px;
+    border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+}
+
+#nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+#nav ul li {
+    border-top: 1px solid #e1e1e1;
+    border-left: 1px solid #d1d1d1;
+    border-right: 1px solid #5a5a5a;
+    border-bottom: 1px solid #565656;
+    list-style: none;
+    float: left;
+    height: 80px;
+    width: 158px;
+    text-align: center;
+    line-height: 75px;
+    position: relative;
+}
+
+#nav ul > li:first-child 
+{
+	border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+}
+
+#nav ul > li:last-child
+{
+	border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+}
+
+#nav ul li > .arrow {
+    position: absolute;
+    width: 45px;
+    height: 22px;
+    left: 57px;
+    bottom: -1px;
+}
+
+.arrow:hover 
+{
+    display: none;
+    background-image: none !important;
+}
+
+#nav ul li div:hover {
+    height: 80px;
+    background: url("../images/button.highlight.png") center no-repeat;
+}
+
+#nav ul li a {
+    display: block;
+    color: #000;
+    font-size: 1.8em;
+    text-shadow: 1px 1px 0px #ccc;
+    text-decoration: none;
+}
+
+.current > .arrow {
+    background: url("../images/selected.menuitem.arrow.png") top left no-repeat;
+}

@@ -1,0 +1,132 @@
+﻿@model OpenEhs.Web.Models.PatientViewModel
+<div id="BasicInformationColumn">
+    <fieldset class="group">
+        <legend>General</legend>
+        <div class="group">
+            <div class="column">
+                @Html.LabelFor(model => model.PatientId)<br />
+                @Html.TextBoxFor(model => model.PatientId, new { disabled = "disabled" })<br />
+                @Html.LabelFor(model => model.OldPhysicalRecordNumber)<br />
+                @Html.TextBoxFor(model => model.OldPhysicalRecordNumber, new { disabled = "disabled" })<br />
+                @Html.LabelFor(model => model.FirstName)<br />
+                @Html.TextBoxFor(model => model.FirstName, new { disabled = "disabled" })<br />
+                @Html.LabelFor(model => model.MiddleName)<br />
+                @Html.TextBoxFor(model => model.MiddleName, new { disabled = "disabled" })<br />
+                @Html.LabelFor(model => model.LastName)<br />
+                @Html.TextBoxFor(model => model.LastName, new { disabled = "disabled" })<br />
+
+
+                <div id="GenderRadio">
+                    
+				@Html.LabelFor(model => model.Gender)<br />
+                @Html.DropDownListFor(model => model.Gender, Model.Genders, "Choose Gender...", new { disabled = "disabled", @class = "modal-input ui-widget-content ui-corner-all" })<br />
+
+                </div>
+
+            </div>
+            <div class="column">
+
+				@Html.LabelFor(model => model.CreationDate)<br />
+                @Html.TextBox("CreationDate", String.Format("{0:d}", Model.CreationDate), new { disabled = "disabled" })<br />
+                @Html.LabelFor(model => model.PlaceOfBirth)<br />
+                @Html.TextBoxFor(model => model.PlaceOfBirth, new { disabled = "disabled" }) <br />
+                @Html.LabelFor(model => model.DateOfBirth, "DOB")<br />
+                @Html.TextBox("DateOfBirth", String.Format("{0:d}", Model.DateOfBirth), new { disabled = "disabled" })<br />
+                @Html.LabelFor(model => model.PhoneNumber)<br />
+                @Html.TextBoxFor(model => model.PhoneNumber, new { disabled = "disabled" })<br />
+                @Html.LabelFor(model => model.InsuranceNumber)<br />
+                @Html.TextBoxFor(model => model.InsuranceNumber, new { disabled = "disabled" })<br />
+                @Html.LabelFor(model => model.InsuranceExpiration)<br />
+                @if (Model.InsuranceExpiration != DateTime.MinValue)
+                {
+                    @Html.TextBox("InsuranceExpiration", String.Format("{0:d}", Model.InsuranceExpiration), new { disabled = "disabled" })
+                }
+                else
+                {
+                    @Html.TextBox("InsuranceExpiration", "", new { disabled = "disabled" })
+                }
+            </div>
+        </div>
+        <div id="BasicMoreInfoLink">
+            Show Details...</div>
+        <div id="BasicMoreInfo">
+            <div class="column">
+                @Html.LabelFor(model => model.Tribe)<br />
+                @Html.DropDownListFor(model => model.Tribe, Model.Tribes, "Choose an option...", new { disabled = "disabled", @class = "modal-input ui-widget-content ui-corner-all" })<br />
+                @Html.LabelFor(model => model.Education)<br />
+                @Html.DropDownListFor(model => model.Education, Model.Educations, "Choose an option...", new { disabled = "disabled", @class = "modal-input ui-widget-content ui-corner-all" })<br />
+                @Html.LabelFor(model => model.MaritalStatus)<br />
+                @Html.DropDownListFor(model => model.MaritalStatus, Model.MaritalStatuses, "Choose an option...", new { disabled = "disabled", @class = "modal-input ui-widget-content ui-corner-all" })<br />
+            </div>
+            <div class="column">
+                @Html.LabelFor(model => model.Race)<br />
+                @Html.DropDownListFor(model => model.Race, Model.Races, "Choose an option...", new { disabled = "disabled", @class = "modal-input ui-widget-content ui-corner-all" })<br />
+                @Html.LabelFor(model => model.Occupation)<br />
+                @Html.TextBoxFor(model => model.Occupation, new { disabled = "disabled" })
+            </div>
+        </div>
+        <div id="AddressLink">
+            Show Address...</div>
+        <div id="BasicAddress">
+            <div class="column">
+                @Html.LabelFor(model => model.Address.Street1)<br />
+                @Html.TextBoxFor(model => model.Address.Street1, new { disabled = "disabled" })<br />
+                @Html.LabelFor(model => model.Address.City)<br />
+                @Html.TextBoxFor(model => model.Address.City, new { disabled = "disabled" })<br />
+                @Html.LabelFor(model => model.Address.Country)<br />
+                @Html.DropDownListFor(model => model.Address.Country, Model.Countries, new { disabled = "disabled" })
+            </div>
+            <div class="column">
+                @Html.LabelFor(model => model.Address.Street2)<br />
+                @Html.TextBoxFor(model => model.Address.Street2, new { disabled = "disabled" })<br />
+                @Html.LabelFor(model => model.Address.Region)<br />
+                @Html.TextBoxFor(model => model.Address.Region, new { disabled = "disabled" })
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Emergency Contact</legend>
+        <div class="group">
+            <div class="column">
+                @Html.LabelFor(model => model.EmergencyContact.FirstName)<br />
+                @Html.TextBoxFor(model => model.EmergencyContact.FirstName, new { disabled = "disabled" })<br />
+                @Html.LabelFor(model => model.EmergencyContact.PhoneNumber)<br />
+                @Html.TextBoxFor(model => model.EmergencyContact.PhoneNumber, new { disabled = "disabled" })<br />
+            </div>
+            <div class="column">
+                @Html.LabelFor(model => model.EmergencyContact.LastName)<br />
+                @Html.TextBoxFor(model => model.EmergencyContact.LastName, new { disabled = "disabled" })<br />
+            </div>
+        </div>
+        <div id="EmergencyContactMoreInfoLink">
+            Show Details...</div>
+        <div id="EmergencyContactMoreInfo">
+            <div class="group">
+                <div class="column">
+                    @Html.LabelFor(model => model.EmergencyContact.Address.Street1)<br />
+                    @Html.TextBoxFor(model => model.EmergencyContact.Address.Street1, new { disabled = "disabled" })<br />
+                    @Html.LabelFor(model => model.EmergencyContact.Address.City)<br />
+                    @Html.TextBoxFor(model => model.EmergencyContact.Address.City, new { disabled = "disabled" })<br />
+                    @Html.LabelFor(model => model.EmergencyContact.Address.Country)<br />
+                    @Html.DropDownListFor(model => model.EmergencyContact.Address.Country, Model.Countries, new { disabled = "disabled" })
+                </div>
+                <div class="column">
+                    @Html.LabelFor(model => model.EmergencyContact.Address.Street2)<br />
+                    @Html.TextBoxFor(model => model.EmergencyContact.Address.Street2, new { disabled = "disabled" })<br />
+                    @Html.LabelFor(model => model.EmergencyContact.Address.Region)<br />
+                    @Html.TextBoxFor(model => model.EmergencyContact.Address.Region, new { disabled = "disabled" })<br />
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>
+<div id="BasicInformationNotes">
+    <div id="isActivePatient">
+        @Html.CheckBoxFor(model => model.IsActive, new { disabled = "disabled" }) @Html.LabelFor(model => model.IsActive, "Active")
+        <button id="printButton" class="printButton ui-button ui-widget ui-state-default ui-corner-all">
+            Print Barcode</button>
+    </div>
+    <label for="patientNoteTextBox">
+        Notes</label>
+    <textarea rows="30" cols="20" name="patientNoteTextBox" id="patientNoteTextBox" disabled="disabled">@Model.Note</textarea>
+</div>

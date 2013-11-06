@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="OpenEhs.Domain.Exceptions.RequiredFieldException" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\RequiredFieldException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenEhs.Domain.Exceptions.ValueLessThanZeroException" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\ValueLessThanZeroException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenEhs.Domain.Address" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAgAAAAAAIEAAAAAAAAA4AAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Address\Address.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenEhs.Domain.Invoice" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAgAAAAAAEAACAAAAAAAAQAABEAAAAAAACAg=</HashCode>
+      <FileName>Model\Billing\Invoice.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenEhs.Domain.InvoiceLineItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAEAAAAAAAAAAAQAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Model\Billing\InvoiceLineItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenEhs.Domain.Payment" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACIAAAAAEAAAAAEAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Billing\Payment.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenEhs.Domain.PatientCheckIn" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAAAAAAAAEAAAAAAAAAAAAAQAAQAAAAAACAA=</HashCode>
+      <FileName>Model\CheckIn\PatientCheckIn.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenEhs.Domain.PatientEncounter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAAAgAAABIAEAIAAAAACCAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Model\Encounter\PatientEncounter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenEhs.Domain.Note" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAAAAAAAAEAAkAABAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Model\Note\Note.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenEhs.Domain.Allergy" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAKAAAAAAAAAAAAEAAAAAQAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Model\Patient\Allergy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenEhs.Domain.EmergencyContact" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAAAAEAAAQAAAAAAAAAACAAABAAAACAg=</HashCode>
+      <FileName>Model\Patient\EmergencyContact.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenEhs.Domain.Patient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JAACAEAAAACAAACAFAAQQAAAAAAQAEACAAACQAAAAAg=</HashCode>
+      <FileName>Model\Patient\Patient.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenEhs.Domain.Problem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Model\Patient\Problem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenEhs.Domain.Category" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAEAAAQAQAAAAAAAAAAAAEAAAAAAQ=</HashCode>
+      <FileName>Model\Product\Category.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenEhs.Domain.Product" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAMAAAAAQAAAAAAAAgAAAAAAAACAA=</HashCode>
+      <FileName>Model\Product\Product.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenEhs.Domain.Service" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAEAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Service\Service.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenEhs.Domain.Staff" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAEAAAAAAAAAAEAAQUAAAAAAAAAACAQAAAAAAAAg=</HashCode>
+      <FileName>Model\Staff\Staff.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenEhs.Domain.Surgery" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAAAEAAAAAAAAAAAIAAAIAAgAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Model\Surgery\Surgery.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenEhs.Domain.Template" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAABAAAAACAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Model\Templates\Template.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenEhs.Domain.TemplateCategory" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Templates\TemplateCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenEhs.Domain.Role" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Model\User\Role.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenEhs.Domain.User" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACACAAAAAAAGAAAAAQAAAEQQAACAAAACAAAEAgQCAAA=</HashCode>
+      <FileName>Model\User\User.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenEhs.Domain.BloodPressure" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIACAACAA=</HashCode>
+      <FileName>Model\Vitals\BloodPressure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenEhs.Domain.Vitals" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAGAAAABAAAAAAAEAAAAAAAACAAAAAIAQAAAAAEAQA=</HashCode>
+      <FileName>Model\Vitals\Vitals.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="OpenEhs.Domain.IEntity" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Common Interfaces\IEntity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="OpenEhs.Domain.PCIStatus" Collapsed="true">
+    <Position X="5.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Model\CheckIn\PCIStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OpenEhs.Domain.PCIType" Collapsed="true">
+    <Position X="7.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\CheckIn\PCIType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OpenEhs.Domain.Gender" Collapsed="true">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Model\Patient\Gender.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OpenEhs.Domain.Relationship" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BABAAAIAAAAACAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Model\Patient\Relationship.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OpenEhs.Domain.StaffType" Collapsed="true">
+    <Position X="2.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAACAAAAAAAAAAAEAAAAAAAAAAQAAAAE=</HashCode>
+      <FileName>Model\Staff\StaffType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OpenEhs.Domain.LogInPermissions" Collapsed="true">
+    <Position X="4" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAACAAAAAAQAAAAAAAAAAAAAAAQAAAAE=</HashCode>
+      <FileName>Model\User\LogInPermissions.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OpenEhs.Domain.BloodPressureCategory" Collapsed="true">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAgIAAAAAAQAAAEAAAA=</HashCode>
+      <FileName>Model\Vitals\BloodPressureCategory.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OpenEhs.Domain.VitalsType" Collapsed="true">
+    <Position X="4" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAACAAAAAAAAEAQAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Model\Vitals\VitalsType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

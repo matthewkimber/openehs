@@ -1,0 +1,68 @@
+<mockup version="1.0" skin="sketch" measuredW="880" measuredH="450" mockupW="450" mockupH="400">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="420" y="40" w="-1" h="-1" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>MLKMC%20-%20Diagnosis</text>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::HRule" x="435" y="117" w="420" h="-1" measuredW="100" measuredH="5" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::HRule" x="435" y="152" w="420" h="-1" measuredW="100" measuredH="5" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="435" y="122" w="-1" h="-1" measuredW="75" measuredH="29" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Diagnosis</text>
+        <size>16</size>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="681" y="125" w="-1" h="-1" measuredW="174" measuredH="25" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Current%20Patient%3A%20Jane%20Doe</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::ButtonBar" x="430" y="76" w="400" h="31" measuredW="424" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Home%2C%20Select%20Patient%2C%20Patient%20Records%2C%20Diagnosis%2C%20Rx%2C%20Reports%2C%20Misc</text>
+        <hrefs>Doctor_Home%26bm%3BDoctor_Home.bmml%26bm%3BDoctor_Home.bmml%26bm%3BDoctor_Home.bmml%2CDoctor_SelectPatient%26bm%3BDoctor_SelectPatient.bmml%26bm%3BDoctor_SelectPatient.bmml%26bm%3BDoctor_SelectPatient.bmml%2CDoctor_PatientRecords%26bm%3BDoctor_PatientRecords.bmml%26bm%3BDoctor_PatientRecords.bmml%26bm%3BDoctor_PatientRecords.bmml%2CDoctor_Diagnosis%26bm%3BDoctor_Diagnosis.bmml%26bm%3BDoctor_Diagnosis.bmml%26bm%3BDoctor_Diagnosis.bmml%2CDoctor_Rx%26bm%3BDoctor_Rx.bmml%26bm%3BDoctor_Rx.bmml%26bm%3BDoctor_Rx.bmml%2C%2C</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2210%2C36%2C57%2C67%22%20href%3D%22Doctor_Home.bmml%22%20alt%3D%22Doctor_Home%22%20id%3D%225_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%2259%2C36%2C142%2C67%22%20href%3D%22Doctor_SelectPatient.bmml%22%20alt%3D%22Doctor_SelectPatient%22%20id%3D%225_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22144%2C36%2C234%2C67%22%20href%3D%22Doctor_PatientRecords.bmml%22%20alt%3D%22Doctor_PatientRecords%22%20id%3D%225_2%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22236%2C36%2C297%2C67%22%20href%3D%22Doctor_Diagnosis.bmml%22%20alt%3D%22Doctor_Diagnosis%22%20id%3D%225_3%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22299%2C36%2C332%2C67%22%20href%3D%22Doctor_Rx.bmml%22%20alt%3D%22Doctor_Rx%22%20id%3D%225_4%22/%3E%0A</map>
+        <selectedIndex>3</selectedIndex>
+        <size>9</size>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="435" y="172" w="-1" h="-1" measuredW="126" measuredH="25" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Add%20new%20diagnosis%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::ComboBox" x="561" y="171" w="-1" h="-1" measuredW="199" measuredH="25" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Choose%20or%20type%20a%20condition</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Button" x="765" y="170" w="-1" h="-1" measuredW="49" measuredH="28" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Add</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="435" y="219" w="-1" h="-1" measuredW="114" measuredH="25" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Previous%20diagnosis</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::DataGrid" x="435" y="240" w="420" h="119" measuredW="312" measuredH="118" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Condition%2C%20Date%20Diagnosed%2C%20Cured%20%28y/n%29%0AStrep%20Throat%2C%2030/09/2010%2C%20No%0AInfluenza%2C%2006/08/2010%2C%20Yes%0ABroken%20Wrist%2C%2015/01/2009%2C%20Yes</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Button" x="435" y="366" w="-1" h="-1" measuredW="129" measuredH="28" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Remove%20Diagnosis</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Button" x="757" y="366" w="-1" h="-1" measuredW="98" measuredH="28" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Mark%20Cured</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

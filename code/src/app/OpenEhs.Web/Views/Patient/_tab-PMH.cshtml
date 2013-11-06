@@ -1,0 +1,34 @@
+﻿@model OpenEhs.Web.Models.PatientViewModel
+
+<div id="pmhHeader" class="group">
+    <h2 id="pmh">
+        Past Medical History
+    </h2>
+</div>
+
+<br />
+
+<p id="recentHeader">Please choose a past visit</p>
+
+<br />
+
+<div id="selectVisitDiv">
+	
+	<select style="width: 250px; height: 40px; font-size: 25px; padding: 3px;" name="visitPick">
+		<option value="">Select Visit...</option>
+		@foreach (var pastVisit in Model.PatientCheckIns)
+		{
+			<option value="@pastVisit.Id">@pastVisit.CheckInTime.ToString("dd/MM/yyyy")</option>
+		}
+	</select>
+
+	<input class="submitSelectButton" name="submitSelectButton" type="button" value="Submit" /> 
+
+</div>
+
+<p id="summaryTitle">Visit Summary</p>
+
+<!-- Do not remove div! -->
+<div id="replaceDIV">
+	<!-- This div is a place marker for javascript. It is replaced when function is called -->
+</div>

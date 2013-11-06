@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9F0827C4-FFAE-4B13-9736-012A13662D90}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenEhs.Domain</RootNamespace>
+    <AssemblyName>OpenEhs.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\OpenEhs.Domain.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mysql.data">
+      <HintPath>..\..\..\lib\mysql-connector\v4\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Address\Country.cs" />
+    <Compile Include="Model\Charting\IntakeChart.cs" />
+    <Compile Include="Model\Charting\OutputChart.cs" />
+    <Compile Include="Model\CheckIn\Location.cs" />
+    <Compile Include="Model\Common Interfaces\IEntity.cs" />
+    <Compile Include="Model\Charting\FeedChart.cs" />
+    <Compile Include="Model\Note\NoteType.cs" />
+    <Compile Include="Model\Patient\BloodTypes.cs" />
+    <Compile Include="Model\Patient\Education.cs" />
+    <Compile Include="Model\Patient\Immunization.cs" />
+    <Compile Include="Model\Patient\MaritalStatus.cs" />
+    <Compile Include="Model\Patient\Medication.cs" />
+    <Compile Include="Model\Patient\MedicationRouteOfAdministrationType.cs" />
+    <Compile Include="Model\Patient\PatientAllergy.cs" />
+    <Compile Include="Model\Patient\PatientImmunization.cs" />
+    <Compile Include="Model\Patient\PatientMedication.cs" />
+    <Compile Include="Model\Patient\PatientProblem.cs" />
+    <Compile Include="Model\Patient\Problem.cs" />
+    <Compile Include="Model\Patient\Races.cs" />
+    <Compile Include="Model\Patient\Religions.cs" />
+    <Compile Include="Model\Patient\Tribes.cs" />
+    <Compile Include="Model\Surgery\CaseType.cs" />
+    <Compile Include="Model\Surgery\StaffRole.cs" />
+    <Compile Include="Model\Surgery\SurgeryStaff.cs" />
+    <Compile Include="Model\Templates\NoteTemplateCategory.cs" />
+    <Compile Include="Model\Vitals\BloodPressure.cs" />
+    <Compile Include="Model\Vitals\BloodPressureCategory.cs" />
+    <Compile Include="Model\Product\Category.cs" />
+    <Compile Include="Exceptions\RequiredFieldException.cs" />
+    <Compile Include="Exceptions\ValueLessThanZeroException.cs" />
+    <Compile Include="Model\Address\Address.cs" />
+    <Compile Include="Model\Billing\Invoice.cs" />
+    <Compile Include="Model\Billing\InvoiceItem.cs" />
+    <Compile Include="Model\Billing\Payment.cs" />
+    <Compile Include="Model\CheckIn\PatientCheckIn.cs" />
+    <Compile Include="Model\CheckIn\PatientCheckinType.cs" />
+    <Compile Include="Model\User\User.cs" />
+    <Compile Include="Model\Note\Note.cs" />
+    <Compile Include="Model\Patient\Allergy.cs" />
+    <Compile Include="Model\Patient\EmergencyContact.cs" />
+    <Compile Include="Model\Patient\Gender.cs" />
+    <Compile Include="Model\Patient\Patient.cs" />
+    <Compile Include="Model\Patient\Relationship.cs" />
+    <Compile Include="Model\Product\Product.cs" />
+    <Compile Include="Model\Service\Service.cs" />
+    <Compile Include="Model\Staff\StaffType.cs" />
+    <Compile Include="Model\Surgery\Surgery.cs" />
+    <Compile Include="Model\Vitals\Vitals.cs" />
+    <Compile Include="Model\Vitals\VitalsType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\User\Role.cs" />
+    <Compile Include="Model\Templates\Template.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\Labs\" />
+    <Folder Include="Model\Report\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Domain Class Diagram.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

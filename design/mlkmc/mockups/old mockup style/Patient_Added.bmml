@@ -1,0 +1,65 @@
+<mockup version="1.0" skin="sketch" measuredW="1028" measuredH="471" mockupW="605" mockupH="444">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="413" y="61" w="-1" h="-1" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>MLKMC%20-%20New%20Patient%20Added</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::SubTitle" x="428" y="120" w="-1" h="-1" measuredW="231" measuredH="29" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>The%20patient%20has%20been%20added.</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="564" y="174" w="-1" h="-1" measuredW="148" measuredH="25" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Card%20Number%3A%20123456</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="569" y="199" w="-1" h="-1" measuredW="137" measuredH="25" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Admission%20Number%3A%20%3F</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::HRule" x="428" y="154" w="414" h="-1" measuredW="100" measuredH="5" zOrder="4" locked="false" isInGroup="-1"/>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Paragraph" x="448" y="249" w="200" h="150" measuredW="200" measuredH="140" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>false</bold>
+        <text>John%20Doe%0AMale%0ABorn%3A%2010/19/1980%0ATel%3A%20123-456-789%0AHouse%3A%201111%20S.%202222%20N.%0AArea%3A%20area%3F%0ACity%3A%20Accra</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="706" y="256" w="-1" h="-1" measuredW="136" measuredH="25" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Is%20this%20info%20correct%3F</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Button" x="706" y="288" w="100" h="49" measuredW="47" measuredH="28" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Front_Desk_Patient_Options%26bm%3BFront_Desk_Patient_Options.bmml%26bm%3BFront_Desk_Patient_Options.bmml%26bm%3BFront_Desk_Patient_Options.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22293%2C271%2C393%2C320%22%20href%3D%22Front_Desk_Patient_Options.bmml%22%20alt%3D%22Front_Desk_Patient_Options%22%20id%3D%227%22/%3E</map>
+        <text>Yes</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Button" x="706" y="352" w="100" h="28" measuredW="100" measuredH="28" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Add_New_Patient%26bm%3BAdd_New_Patient.bmml%26bm%3BAdd_New_Patient.bmml%26bm%3BAdd_New_Patient.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22293%2C335%2C393%2C363%22%20href%3D%22Add_New_Patient.bmml%22%20alt%3D%22Add_New_Patient%22%20id%3D%228%22/%3E</map>
+        <text>No%2C%20go%20back</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::StickyNote" x="877" y="17" w="141" h="157" measuredW="109" measuredH="123" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>If%20this%20was%20a%20completely%20new%20patient%2C%20a%20new%20%22Card%20Number%22%20is%20generated.</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Arrow" x="727" y="159" w="169" h="27" measuredW="150" measuredH="100" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <curvature>0</curvature>
+        <direction>bottom</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

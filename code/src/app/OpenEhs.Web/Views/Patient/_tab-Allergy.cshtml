@@ -1,0 +1,48 @@
+﻿@model OpenEhs.Web.Models.PatientViewModel
+<div id="allergyHeader" class="group">
+    <h2 id="Allergies">
+        Allergies</h2>
+    <input id="allergyAddButton" name="allergyAddButton" type="button" value="Add" />
+</div>
+<div>
+    <ul id="allergyList">
+        @foreach (var allergy in Model.PatientAllergies) {
+            <li class="group" id="string.Format("{0}{1}", "allergy_", @allergy.Id)">
+                <div style="float: left;">@allergy.Allergy.Name</div>
+            </li>
+        }
+    </ul>
+</div>
+<div id="addAllergyDialog" title="Add Allergy for @Model.FirstName @Model.LastName">
+    <form id="addAllergyForm" action="">
+        <fieldset>
+            <label for="name" class="modal-label">
+                Allergy Name:</label>
+            @*<input type="text" name="name" id="addAllergyName" class="text required ui-widget-content ui-corner-all" />*@
+
+			<select name="removeProductSelect" id="addAllergyName" class="required modal-input text ui-widget-content ui-corner-all">
+            <option value="">Select Allergy...</option>
+            @foreach (var all in Model.AllAllergies)
+            {
+                <option value="@all.Id">@all.Name</option>
+            }
+            </select>
+
+        </fieldset>
+    </form>
+</div>
+
+<div id="createAllergyDialog" title="Add New Allergy">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="createAllergyDialogForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Allergy Name:
+        </div>
+        <div>
+            <input type="text" name="allergyname" id="modal_allergyName" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+    </fieldset>
+    </form>
+</div>

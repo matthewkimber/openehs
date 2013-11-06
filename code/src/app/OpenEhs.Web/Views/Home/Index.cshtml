@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+@section head
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#dashboard-tab").addClass("current");
+        });
+    </script>
+    <style type="text/css">
+        #warning 
+        {
+        	color: InfoText;
+        	padding: 25px 25px 35px 25px;
+        	margin: 30px 100px 0 100px;
+        	background-color: InfoBackground;
+        	border: 2px dotted red;
+        }
+        
+        #warning h2
+        {
+        	margin-bottom: 10px;
+        }
+        
+        #warning p
+        {
+        	font-size: 1.6em;
+        	line-height: 1.5em;
+        }
+    </style>
+}
+
+<div id="warning">
+    <h2>Warning</h2>
+    <p>
+        This software is <em>pre-release</em> software and makes no guarantees. Access
+        is provided for <em>testing purposes only</em> and should not be used for the management
+        of a medical facility in its current state.
+    </p>
+</div>

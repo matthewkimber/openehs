@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="OpenEhs.Domain"
+                   namespace="OpenEhs.Domain">
+
+  <class name="Patient" table="Patient">
+    <id name="Id" column="PatientId">
+      <generator class="native" />
+    </id>
+    <property name="FirstName" not-null="true" length="50" />
+    <property name="MiddleName" not-null="false" length="50"/>
+    <property name="LastName" not-null="true" length ="50"/>
+    <property name="DateOfBirth" not-null="true"/>
+    <property name="Gender" not-null="true"/>
+    <property name="PhoneNumber" not-null="false" length="20"/>
+
+    <many-to-one name="Address" column="AddressID" unique="true" cascade="all" />
+
+    <property name="BloodType" not-null="false"/>
+    <property name="Tribe" not-null="false"/>
+    <property name="Race" not-null="false"/>
+    <property name="Religion" not-null="false"/>
+    <property name="Education" not-null="false"/>
+    <property name="Occupation" not-null="false"/>
+
+    <property name="PlaceOfBirth" not-null="false"/>
+    <property name="MaritalStatus" not-null="false"/>
+
+    <property name="InsuranceNumber" not-null="false"/>
+    <property name="InsuranceExpiration" not-null="false"/>
+
+    <property name="Note" column="PatientNote" not-null="false" />
+    <property name="OldPhysicalRecordNumber" column="OldPhysicalRecordNumb" not-null="false" />
+    <property name="DateOfDeath" column="DateOfDeath" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    
+    <property name="CreationDate" not-null="true" />
+
+    <many-to-one name="EmergencyContact" column="EmergencyContactID" unique="true" cascade="all" />
+    
+    <bag name="Problems" table="PatientProblem" cascade="all" lazy="false">
+      <key column="PatientID" />
+      <one-to-many class="PatientProblem" />
+    </bag>
+
+    <bag name="Immunizations" table="PatientImmunization" cascade="all" lazy="false">
+      <key column="PatientID" />
+      <one-to-many class="PatientImmunization" />
+    </bag>
+
+    <bag name="Allergies" table="PatientAllergy" cascade="all" lazy="false">
+      <key column="PatientID" />
+      <one-to-many class="PatientAllergy" />
+    </bag>
+
+    <bag name="PatientCheckIns" table="PatientCheckIn" cascade="all">
+      <key column="PatientId" />
+      <one-to-many class="PatientCheckIn" />
+    </bag>
+
+    <bag name="Medications" table="PatientMedication" cascade="all" lazy="false">
+      <key column="PatientID" />
+      <one-to-many class="PatientMedication" />
+    </bag>
+    
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="OpenEhs.Domain"
+                   namespace="OpenEhs.Domain">
+
+  <class name="Address" table="Address">
+    <id name="Id" column="AddressID">
+      <generator class="native" />
+    </id>
+    <property name="Street1" not-null="true" length="50" />
+    <property name="Street2" not-null="false" length="50" />
+    <property name="City" not-null="true" length="30" />
+    <property name="Region" not-null="true" length="30" />
+    <property name="Country" not-null="true" />
+    <!--
+    <many-to-one name="Country"
+             class="Country"
+             column="CountryID"
+             cascade="all"
+             unique="true" />
+             -->
+
+    <property name="IsActive" not-null="true" />   
+  </class>
+</hibernate-mapping>

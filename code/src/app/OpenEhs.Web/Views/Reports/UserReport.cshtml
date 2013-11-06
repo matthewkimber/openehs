@@ -1,0 +1,61 @@
+﻿@model OpenEhs.Web.Models.UserReportViewModel
+@{
+    ViewBag.Title = "User Report";
+}
+@section head
+{
+    <script src="@Url.Content("~/Scripts/jquery.ui.datepicker-en-GB.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#SelectedDate").datepicker();
+        });
+    </script>
+}
+<h2>User Report</h2>
+<br />
+@using (Html.BeginForm())
+{    
+    <p>
+    Select a Date 
+    @Html.EditorFor(m => m.SelectedDate)
+    <input type="submit" value="Create Report" />
+    </p>
+    <br />
+}
+
+@Html.ActionLink("Back to Reports", "Index")
+@if (Model.Data != null)
+{
+<table>
+    <thead>
+        <tr>
+            <th class="LastName">
+                Last Name
+            </th>
+            <th class="FirstName">
+                First Name
+            </th>
+            <th class="PatientsServed">
+                Patients Served
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (System.Data.DataRowView record in Model.Data)
+        {
+        <tr>
+            <td class="LastName">
+                @String.Format("{0}", record[0].ToString())
+            </td>
+            <td class="FirstName">
+                @String.Format("{0}", record[1].ToString())
+            </td>
+            <td class="PatientsServed" align="center">
+                @String.Format("{0}", record[2].ToString())
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+@Html.ActionLink("Back to Reports", "Index")
+}

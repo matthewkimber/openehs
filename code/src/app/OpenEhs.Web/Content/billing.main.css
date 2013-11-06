@@ -1,0 +1,232 @@
+﻿#Actions
+{
+	margin-bottom: 20px;
+}
+
+#Actions input
+{
+	font-family: Segoe, Sans-Serif;
+	font-size: 3.2em;
+	width: 710px;
+	height: 45px;
+}
+
+#CreateNewBillingButton
+{
+	float: left;
+}
+
+.ui-button-text
+{
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 15px 20px 16px 20px !important;
+}
+
+#SearchBillingButton
+{
+	float: right;
+	margin-left: 10px;
+}
+
+#InvoiceTitle
+{
+    height: 55px;
+    line-height: 55px;
+}
+
+#InvoiceTitle > h1
+{
+	font-size: 3.2em;
+	float: left;
+	margin: 2px 0px 0px 0px;
+}
+
+#TotalAndPayment
+{
+	text-align: right;
+	float: right;
+}
+
+#InvoiceTotal
+{
+	font-size: 3.2em;
+	float: left;
+	margin: 2px 20px 0px 0px;
+}
+
+#PaymentActionButtons
+{
+	float: left;
+}
+
+#PayInFullButton, #SelectActionButton
+{
+	font-size: 1.6em;
+	font-weight: bold;
+}
+
+#NewLineItemButton
+{
+	font-size: 1.6em;
+	font-weight: bold;
+}
+
+#InvoiceHeader
+{
+	margin-top: 25px;
+	margin-bottom: 30px;
+}
+
+#InvoiceBillTo
+{
+	float: left;
+}
+
+#InvoiceBillTo fieldset
+{
+	width: 300px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 10px 20px;
+}
+
+#InvoiceBillTo fieldset legend
+{
+    font-size: 1.4em;
+}
+
+#InvoiceBillTo ul
+{
+	font-size: 1.6em;
+	list-style: none;
+	padding-left: 0px;
+}
+
+#InvoiceBillTo ul li
+{
+    margin: 2px 0px;
+}
+
+#InvoiceHeaderInformation
+{
+    border: 1px solid gray;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+	font-size: 1.4em;
+	float: right;
+	margin-top: 7px;
+}
+
+#InvoiceHeaderInformation table
+{
+    border: none;
+	text-align: right;
+	border-collapse: collapse;
+}
+
+#InvoiceLineItems
+{
+	font-size: 1.4em;
+}
+
+#InvoiceLineItems table
+{
+	width: 100%;
+}
+
+.DescriptionColumn
+{
+	width: 50%;
+}
+
+.UnitColumn
+{
+	width: 12%;
+	text-align: center;
+}
+
+.PriceColumn
+{
+	width: 15%;
+	text-align: right;
+}
+
+.QuantityColumn
+{
+	width: 8%;
+	text-align: center;
+}
+
+.TotalColumn
+{
+	width: 15%;
+	text-align: right;
+}
+
+#invoiceId
+{
+	width: 0px;
+	visibility: hidden;
+}
+
+.HiddenText
+{
+	width:0px;
+	visibility: hidden;
+	height:0px;
+}
+
+#addPayment
+{
+    margin-left: 25px;
+    width: 150px;
+    margin-top: 10px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.modal-label {
+    display: block;
+    float: left;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 2px;
+    text-align: right;
+    width: 100px;
+    font-size: 1.2em;
+}
+
+.modal-label-long {
+    display: block;
+    float: left;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 2px;
+    text-align: right;
+    width: 150px;
+    font-size: 1.2em;
+}
+
+.modal-input {
+    font-size: 1.2em;
+    padding: 4px;
+    border: solid 1px #777777;
+    width: 125px;
+    margin-bottom: 5px;
+}
+
+.modalErrorContainer {
+    padding: 5px 20px 5px 20px;
+    margin-right: 40px;
+    margin-bottom: 5px;
+}
+
+.modalErrorContainer li {
+    list-style-type: circle;
+    color: #FF0000;
+}

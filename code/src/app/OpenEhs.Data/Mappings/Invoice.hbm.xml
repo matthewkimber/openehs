@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="OpenEhs.Domain"
+                   namespace="OpenEhs.Domain">
+
+  <class name="Invoice" table="Invoice">
+    <id name="Id" column="InvoiceID">
+      <generator class="native" />
+    </id>
+    
+    <property name="Date" not-null="true" />
+
+    <one-to-one name="PatientCheckIn"
+                class="PatientCheckIn"
+                property-ref="Invoice" />
+    
+    <property name="IsActive" not-null="true" />
+
+    <bag name="Payments" table="Payment">
+      <key column="InvoiceID" />
+      <one-to-many class="Payment" />
+    </bag>
+
+    <bag name="Items" table="InvoiceItem">
+      <key column="InvoiceID" />
+      <one-to-many class="InvoiceItem" />
+    </bag>
+  </class>
+</hibernate-mapping>

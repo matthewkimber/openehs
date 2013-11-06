@@ -1,0 +1,652 @@
+﻿@model OpenEhs.Web.Models.AdminViewModel
+@{
+    ViewBag.Title = "Administration";
+}
+@section head
+{
+    <link href="@Url.Content("~/Content/admin.css")" rel="Stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/admin.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#admin-tab").addClass("current");
+        });
+    </script>
+}
+
+<h2>Administration</h2>
+
+<div id="adminLeft">
+
+    <fieldset id="fsLeftMargin" class="setFieldSetWidth">
+        <legend class="legendTextSize">Manage Users</legend>
+        <a href="/admin/user" style="font-size: 2em;">User List</a>
+    </fieldset>
+
+	<fieldset id="fsLeftMarginRowTwo" class="setFieldSetWidth">
+		<legend class="legendTextSize">Manage Locations</legend>
+
+		<input id="addLocation" type="button" value="Add Location" />
+
+        <br />
+
+		<input id="deleteLocation" type="button" value="Delete Location" />
+
+	</fieldset>
+
+	<fieldset id="fsLeftMarginRowTwo" class="setFieldSetWidth">
+		<legend class="legendTextSize">Manage Allergies</legend>
+
+		<input id="editAllergy" type="button" value="Edit Allergy" />
+
+		<br />
+
+		<input id="deleteAllergy" type="button" value="Delete Allergy" />
+
+	</fieldset>
+
+</div>
+
+<div id="adminMiddle">
+
+    <fieldset class="setFieldSetWidth">
+        <legend class="legendTextSize">Manage Products</legend>
+
+        <input id="addProduct" type="button" value="Add Product" />
+
+        <br />
+
+        <input id="editProduct" type="button" value="Edit Product" />
+
+        <br />
+
+        <input id="deleteProduct" type="button" value="Delete Product" />
+
+    </fieldset>
+
+	<fieldset id="fsMiddleMarginRowTwo" class="setFieldSetWidth">
+        <legend class="legendTextSize">Manage Templates</legend>
+
+        <input id="addTemplateCategory" type="button" value="Add Template Category" />
+
+        <br />
+
+        <input id="deleteTemplate" type="button" value="Delete Template" />
+
+    </fieldset>
+
+	<fieldset id="fsMiddleMarginRowTwo" class="setFieldSetWidth">
+		<legend class="legendTextSize">Manage Immunizations</legend>
+
+		<input id="editImmunization" type="button" value="Edit Immunization" />
+
+		<br />
+
+		<input id="deleteImmunization" type="button" value="Delete Immunization" />
+
+	</fieldset>
+
+</div>
+
+<div id="adminRight">
+
+    <fieldset class="setFieldSetWidth">
+        <legend class="legendTextSize">Manage Service</legend>
+
+		<input id="addService" type="button" value="Add Service" />
+
+        <br />
+
+        <input id="editService" type="button" value="Edit Service" />
+
+        <br />
+
+        <input id="deleteService" type="button" value="Delete Service" />
+
+    </fieldset>
+
+	<fieldset id="fsRightMarginRowTwo" class="setFieldSetWidth">
+        <legend class="legendTextSize">Manage Prod Category</legend>
+
+        <input id="addCategory" type="button" value="Add Category" />
+
+        <br />
+
+        <input id="deleteCategory" type="button" value="Delete Category" />
+
+    </fieldset>
+
+	<fieldset id="fsMiddleMarginRowTwo" class="setFieldSetWidth">
+		<legend class="legendTextSize">Manage Medications</legend>
+
+		<input id="editMedication" type="button" value="Edit Medication" />
+
+		<br />
+
+		<input id="deleteMedication" type="button" value="Delete Medication" />
+
+	</fieldset>
+
+</div>
+
+
+<div>
+	<fieldset id="inventoryFS">
+		<legend class="legendTextSize">Inventory</legend>
+
+		<input id="AddInventory" type="button" value="Add Inventory" />
+
+		<input id="EditInventory" type="button" value="Edit Inventory" />
+
+	</fieldset>
+</div>
+
+
+<div>
+    <fieldset id="fsDatabaseBackup">
+        <legend class="legendTextSize">Database Backup</legend>
+        @Html.ActionLink("Backup", "BackupDatabase")
+    </fieldset>
+</div>
+<div id="addProductDialog" title="Add New Product">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="addProductForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Name:
+        </div>
+        <div>
+            <input type="text" name="name" id="model_name" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+        <div class="modal-label-long">
+            Unit:
+        </div>
+        <div>
+            <input type="text" name="unit" id="model_unit" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+		<div class="modal-label-long">
+            Category:
+        </div>
+        <div>
+			<select name="addProductSelect" id="model_categoryid" class="required modal-input text ui-widget-content ui-corner-all">
+            <option value="">Select Category...</option>
+            @foreach (var cat in Model.ActiveCategories)
+            {
+                <option value="@cat.Id">@cat.Name</option>
+            }
+            </select>
+        </div>
+		<div class="modal-label-long">
+            Price:
+        </div>
+        <div>
+            <input type="text" name="price" id="model_price" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+		<div class="modal-label-long">
+            Quantity:
+        </div>
+        <div>
+            <input type="text" name="quantityonhand" id="model_quantityonhand" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+<div id="removeProductDialog" title="Remove Product">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="removeProductForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Name:
+        </div>
+        <div>
+			<select name="removeProductSelect" id="model_prodname" class="required modal-input text ui-widget-content ui-corner-all">
+            <option value="">Select Product...</option>
+            @foreach (var prod in Model.ActiveProducts)
+            {
+                <option value="@prod.Id">@prod.Name</option>
+            }
+            </select>
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+<div id="editProductDialog" title="Edit Product">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="editProductForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Search Product:
+        </div>
+        <div>
+			<select name="editProductSelect" id="model_productSelect" class="required modal-input text ui-widget-content ui-corner-all">
+            <option value="">Select Product...</option>
+            @foreach (var prod in Model.ActiveProducts)
+            {
+                <option value="@prod.Id">@prod.Name</option>
+            }
+        </select>
+        </div>
+		 <div class="modal-label-long">
+            Name:
+        </div>
+		<div>
+            <input type="text" name="editprodname" id="model_editprodname" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+		<div class="modal-label-long">
+            Unit:
+        </div>
+		<div>
+            <input type="text" name="editprodunit" id="model_editprodunit" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+		<div class="modal-label-long">
+            Category:
+        </div>
+		<div>
+            <select name="editProductSelect" id="model_cataProdSelect" class="required modal-input text ui-widget-content ui-corner-all">
+            <option value="">Select Product...</option>
+            @foreach (var cat in Model.ActiveCategories)
+            {
+                <option value="@cat.Id">@cat.Name</option>
+            }
+        </select>
+        </div>
+		<div class="modal-label-long">
+            Price:
+        </div>
+		<div>
+            <input type="text" name="editprodprice" id="model_editprodprice" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+<div id="addLocationDialog" title="Add Location">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="addLocationForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Department:
+        </div>
+        <div>
+            <input type="text" name="departmentname" id="model_departmentname" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+		<div class="modal-label-long">
+            Room Number:
+        </div>
+        <div>
+            <input type="text" name="addroomnumber" id="model_addroomnumber" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+<div id="addCategoryDialog" title="Add Category">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="addCategoryForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Name:
+        </div>
+        <div>
+            <input type="text" name="categoryname" id="model_categoryname" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+		<div class="modal-label-long">
+            Description:
+        </div>
+        <div>
+            <input type="text" name="categorydescription" id="model_categorydescription" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+<div id="deleteLocationDialog" title="Delete Location">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="deleteLocationForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Location:
+        </div>
+        <div>
+			<select name="delectLocationSelect" id="model_departmentRoom" class="required modal-input text ui-widget-content ui-corner-all">
+            <option value="">Select Location...</option>
+            @foreach (var loc in Model.ActiveLocations)
+            {
+                <option value="@loc.Id">@loc.Department, Room: @loc.RoomNumber</option>
+            }
+            </select>
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+<div id="addServiceDialog" title="Add Service">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="addServiceForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Name:
+        </div>
+        <div>
+            <input type="text" name="servicename" id="model_servicename" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+		<div class="modal-label-long">
+            Cost:
+        </div>
+        <div>
+            <input type="text" name="servicecost" id="model_servicecost" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+<div id="editServiceDialog" title="Edit Service">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="editServiceForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Service:
+        </div>
+        <div>
+            <select name="editServiceSelect" id="model_editService" class="required modal-input text ui-widget-content ui-corner-all">
+            <option value="">Select Service...</option>
+            @foreach (var service in Model.ActiveServices)
+            {
+                <option value="@service.Id">@service.Name</option>
+            }
+            </select>
+        </div>
+		<div class="modal-label-long">
+            Cost:
+        </div>
+        <div>
+            <input type="text" name="servicecost" id="model_editservicecost" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+<div id="deleteServiceDialog" title="Delete Service">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="deleteServiceForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Service:
+        </div>
+        <div>
+            <select name="deleteServiceSelect" id="model_deleteService" class="required modal-input text ui-widget-content ui-corner-all">
+            <option value="">Select Service...</option>
+            @foreach (var service in Model.ActiveServices)
+            {
+                <option value="@service.Id">@service.Name</option>
+            }
+            </select>
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+<div id="deleteCategoryDialog" title="Delete Category">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="deleteCategoryForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Category:
+        </div>
+        <div>
+            <select name="deleteCategorySelect" id="model_deleteCategory" class="required modal-input text ui-widget-content ui-corner-all">
+            <option value="">Select Catagory...</option>
+            @foreach (var cat in Model.ActiveCategories)
+            {
+                <option value="@cat.Id">@cat.Name</option>
+            }
+            </select>
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+<div id="AddInventoryDialog" title="Add Inventory">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="addInventoryForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Product:
+        </div>
+        <div>
+            <select name="selectinventorySelect" id="model_selectedinventoryprod" class="required modal-input text ui-widget-content ui-corner-all">
+            <option value="">Select Catagory...</option>
+            @foreach (var prod in Model.ActiveProducts)
+            {
+                <option value="@prod.Id">@prod.Name</option>
+            }
+            </select>
+        </div>
+		<div class="modal-label-long">
+            Quantity:
+        </div>
+        <div>
+            <input type="text" name="inventoryquantity" id="model_inventoryquantity" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+<div id="EditInventoryDialog" title="Adjust Inventory">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="EditInventoryForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Product:
+        </div>
+        <div>
+            <select name="selectinventorySelect" id="model_selectededitinventoryprod" class="required modal-input text ui-widget-content ui-corner-all">
+            <option value="">Select Catagory...</option>
+            @foreach (var prod in Model.ActiveProducts)
+            {
+                <option value="@prod.Id">@prod.Name</option>
+            }
+            </select>
+        </div>
+		<div class="modal-label-long">
+            Adjust Quantity:
+        </div>
+        <div>
+            <input type="text" name="inventoryeditquantity" id="model_inventoryeditquantity" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+<div id="deleteAllergyDialog" title="Delete Allergy">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="deleteAllergyForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Category:
+        </div>
+        <div>
+            <select name="deleteAllergySelect" id="model_deleteAllergy" class="required modal-input text ui-widget-content ui-corner-all">
+            <option value="">Select Allergy...</option>
+            @foreach (var all in Model.ActiveAllergies)
+            {
+                <option value="@all.Id">@all.Name</option>
+            }
+            </select>
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+<div id="deleteImmunizationDialog" title="Delete Immunization">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="deleteImmunizationForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Category:
+        </div>
+        <div>
+            <select name="deleteImmunizationSelect" id="model_deleteImmunization" class="required modal-input text ui-widget-content ui-corner-all">
+            <option value="">Select Immunization...</option>
+            @foreach (var all in Model.ActiveImmunizations)
+            {
+                <option value="@all.Id">@all.VaccineType</option>
+            }
+            </select>
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+<div id="deleteMedicationDialog" title="Delete Medication">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="deleteMedicationForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Category:
+        </div>
+        <div>
+            <select name="deleteMedicationSelect" id="model_deleteMedication" class="required modal-input text ui-widget-content ui-corner-all">
+            <option value="">Select Medication...</option>
+            @foreach (var all in Model.ActiveMedications)
+            {
+                <option value="@all.Id">@all.Name</option>
+            }
+            </select>
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+<div id="editAllergyDialog" title="Edit Allergy">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="EditAllergyForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Allergy:
+        </div>
+        <div>
+            <select name="selectAllergySelect" id="model_selectededAllergyName" class="required modal-input text ui-widget-content ui-corner-all">
+            <option value="">Select Allergy...</option>
+            @foreach (var all in Model.ActiveAllergies)
+            {
+                <option value="@all.Id">@all.Name</option>
+            }
+            </select>
+        </div>
+		<div class="modal-label-long">
+            Edit Allergy:
+        </div>
+        <div>
+            <input type="text" name="allergyEditName" id="model_allergyEditName" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+<div id="editImmunizationDialog" title="Edit Immunization">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="EditImmunizationForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Immunization:
+        </div>
+        <div>
+            <select name="selectImmunizationSelect" id="model_selectededImmunizationName" class="required modal-input text ui-widget-content ui-corner-all">
+            <option value="">Select Immunization...</option>
+            @foreach (var all in Model.ActiveImmunizations)
+            {
+                <option value="@all.Id">@all.VaccineType</option>
+            }
+            </select>
+        </div>
+		<div class="modal-label-long">
+            Edit Immunization:
+        </div>
+        <div>
+            <input type="text" name="immunizationEditName" id="model_immunizationEditName" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+<div id="editMedicationDialog" title="Edit Medication">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="EditImmunizationForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Immunization:
+        </div>
+        <div>
+            <select name="selectMedicationSelect" id="model_selectededMedicationName" class="required modal-input text ui-widget-content ui-corner-all">
+            <option value="">Select Medication...</option>
+            @foreach (var all in Model.ActiveMedications)
+            {
+                <option value="@all.Id">@all.Name</option>
+            }
+            </select>
+        </div>
+		<div class="modal-label-long">
+            Edit Medication:
+        </div>
+        <div>
+            <input type="text" name="medicationEditName" id="model_medicationEditName" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+<div id="deleteTemplateCategoryDialog" title="Delete Template Category">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="deleteTemplateForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Template:
+        </div>
+        <div>
+            <select name="deleteTemplateSelect" id="model_deleteTemplate" class="required modal-input text ui-widget-content ui-corner-all">
+            <option value="">Select Category...</option>
+            @foreach (var all in Model.TemplateCategories)
+            {
+                <option value="@all.Id">@all.Name</option>
+            }
+            </select>
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+<div id="addTemplateCategoryDialog" title="Add Template">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="addTemplateForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Name:
+        </div>
+        <div>
+            <input type="text" name="templateCategoryName" id="model_templateCategoryName" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+    </fieldset>
+    </form>
+</div>

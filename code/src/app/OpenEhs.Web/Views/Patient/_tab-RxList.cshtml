@@ -1,0 +1,147 @@
+﻿@model OpenEhs.Web.Models.PatientViewModel
+<div id="medicationHeader" class="group">
+    <h2 id="medication">
+        Medication List
+    </h2>
+    <input class="medicationPrintButton" id="medicationPrintButton" name="medicationPrintButton"
+        type="button" value="Print" />
+    <input class="medicationAddButton" id="medicationAddButton" name="medicationAddButton"
+        type="button" value="Add" />
+</div>
+<div id="newMedicationDialog" title="Add New Medication for @Model.FirstName @Model.LastName">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="addRxForm" action="">
+    <fieldset>
+        <div class="modal-label">
+            Name:
+        </div>
+        <div>
+            <select name="medicationDropDownList" id="medicationDropDownList" class="required modal-input text ui-widget-content ui-corner-all">
+                <option value="">Select Medication...</option>
+                @foreach (var all in Model.AllMedications)
+                {
+                    <option value="@all.Id">@all.Name</option>
+                }
+            </select>
+        </div>
+        <div class="modal-label">
+            Dosage:
+        </div>
+        <div>
+            <input type="text" name="dosage" id="modal_medicationDosage" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+        <div class="modal-label">
+            Frequency:
+        </div>
+        <div>
+            <input type="text" name="dosage" id="modal_medicationFrequency" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+        <div class="modal-label">
+            Duration:
+        </div>
+        <div>
+            <input type="text" name="expdate" id="RxExpDatePicker" class="required modal-input text ui-widget-content ui-corner-all datepicker" />
+        </div>
+        <div class="modal-label">
+            Route:</div>
+        <div>
+            @Html.DropDownList("medicationROA", Model.MedicationRouteOfAdministrationType, "Choose an option...", new {@class = "modal-input ui-widget-content ui-corner-all"})
+        </div>
+        <div class="modal-label">
+            Instructions:
+        </div>
+        <div>
+            <textarea rows="4" cols="40" name="modal_medicationInstructions" id="modal_medicationInstructions"></textarea>
+        </div>
+    </fieldset>
+    </form>
+</div>
+<div id="createMedicationDialog" title="Add New Medication">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="createMedicationDialogForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Medication Name:
+        </div>
+        <div>
+            <input type="text" name="modal_medicationName" id="modal_medicationName" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+        <div class="modal-label-long">
+            Description:
+        </div>
+        <div>
+            <input type="text" name="medicationDescription" id="modal_medicationDescription"
+                class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+    </fieldset>
+    </form>
+</div>
+<div>
+    <p id="rxTitle">
+        <b>Current Medications </b>
+    </p>
+    <br />
+    @if (Model.CurrentMedications.Count == 0)
+    {
+        <ul id="MedicationListOne">
+            <li>There are no recorded current medications for this patient.</li>
+        </ul>
+    }
+    else
+    {
+        <ul id="MedicationListTwo">
+            @foreach (var medication in Model.CurrentMedications)
+            {
+                <li class="group">
+                    <div>
+                        <b>Name: </b>@medication.Medication.Name
+                    </div>
+                    <div>
+                        <b>Dosage: </b>@medication.Dose
+                    </div>
+                    <div>
+                        <b>Frequency: </b>@medication.Frequency
+                    </div>
+                    <div>
+                        <b>Route: </b>@Enum.GetName(typeof(OpenEhs.Domain.MedicationRouteOfAdministrationType), medication.Administration)
+                    </div>
+                    <div>
+                        <b>Instructions: </b>@medication.Instruction</div>
+                    <div>
+                        <b>Start Date: </b>@medication.StartDate.Date.ToString("MM/dd/yyyy")</div>
+                    <div>
+                        <b>Exp Date: </b>@medication.ExpDate.Date.ToString("MM/dd/yyyy")</div>
+                </li>
+            }
+        </ul>
+    }
+    <div id="rxInfoLink">
+        Show Past Medications...
+    </div>
+    <div id="rxMoreInfo">
+        @if (Model.PastMedications.Count == 0)
+        {
+            <ul id="MedicationListThree">
+                <li style="float: left;">There are no recorded past medications for this patient.
+                </li>
+            </ul>
+        }
+        else
+        {
+            <ul id="MedicationListFour">
+                @foreach (var medication in Model.PastMedications)
+                {
+                    <li class="group">
+                        <div>
+                            <b>Name: </b>@medication.Medication.Name
+                        </div>
+                        <div>
+                            <b>Exp Date: </b>@medication.ExpDate.Date.ToString("MM/dd/yyyy")</div>
+                    </li>
+                }
+            </ul>
+        }
+    </div>
+</div>

@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Help";
+}
+@section head
+{
+    <link href="@Url.Content("~/Content/help.css")" rel="Stylesheet" type="text/css" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#help-tab").addClass("current");
+            $("#links li:odd").addClass("striped");
+        });
+    </script>
+}
+<h1>
+    Need some help?
+</h1>
+<br />
+<fieldset id="linksContainer">
+    <ul id="links">
+        <li>@Html.ActionLink("Dashboard", "Dashboard")</li>
+        <li>@Html.ActionLink("Patient Search", "PatientSearch")</li>
+        <li>@Html.ActionLink("Patient Creation", "PatientCreation")</li>
+        <li>@Html.ActionLink("Patient Resources", "PatientResources")</li>
+        <li>@Html.ActionLink("Billing Search", "BillingSearch")</li>
+        <li>@Html.ActionLink("Billing Details", "BillingDetails")</li>
+        <li>@Html.ActionLink("Bar Code Printer Setup", "PrinterSetup")</li>
+        <li>@Html.ActionLink("Print Bar Code For Existing Patient", "PrintExistingPatientBarcode")</li>
+    </ul>
+</fieldset>

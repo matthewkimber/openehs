@@ -1,0 +1,104 @@
+﻿@model OpenEhs.Web.Models.PatientViewModel
+<div id="immunizationHeader" class="group">
+    <h2 id="immunization">
+        Immunization
+    </h2>
+    <input id="immunizationAddButton" name="immunizationAddButton" type="button" value="Add" />
+</div>
+<div>
+    <p id="immunizationTitle">
+        <b>Immunizations within 10 years</b>
+    </p>
+    <br />
+
+
+    <ul id="immunizationListOne">
+	@if (Model.TenYearImmunization.Count == 0) {
+            <li id="noImmunizations">Patient does not have any current recorded immunizations.</li>
+        } 
+		else 
+		{
+		foreach(var immunization in Model.TenYearImmunization)
+		{
+			<li>
+				<div>
+					<b>Vaccine Type: </b>@immunization.Immunization.VaccineType
+				</div>
+				<div>
+					<b>Date Administered: </b>@immunization.DateAdministered.ToString("dd/MM/yyyy")
+				</div>
+			</li>
+		}
+		}
+    </ul>
+
+
+
+</div>
+<div id="immunizationInfoLink">
+    Immunizations Prior to 10 years...
+</div>
+<div id="immunizationMoreInfo">
+    <ul id="immunizationListTwo">
+        @if (Model.PriorImmunization.Count == 0) {
+            <li>Patient does not have any prior 10 year immunizations.</li>
+        } 
+		else 
+		{
+            foreach (var shots in Model.PriorImmunization) {
+            <li class="group">
+                <div style="float: left;">
+                    <b>Vaccine Type: </b>@shots.Immunization.VaccineType</div>
+                <br />
+                <div style="float: left;">
+                    <b>Date Administered: </b>@shots.DateAdministered.ToString("dd/MM/yyyy")</div>
+            </li>
+            }
+        }
+    </ul>
+</div>
+
+<!-- Modal Dialog -->
+<div id="newImmunizationDialog" title="Add New Immunization for @Model.FirstName @Model.LastName">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="addImmunizationForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Vaccine Type:
+        </div>
+        <div>
+            @*<input type="text" name="name" id="modal_immName" class="required modal-input text ui-widget-content ui-corner-all" />*@
+
+			<select name="immunizationSelect" id="immunizationSelect" class="required modal-input text ui-widget-content ui-corner-all">
+            <option value="">Select...</option>
+            @foreach (var all in Model.AllImmunizations)
+            {
+                <option value="@all.Id">@all.VaccineType</option>
+            }
+            </select>
+        </div>
+        <div class="modal-label-long">
+            Date Administered:
+        </div>
+        <div>
+            <input type="text" name="dateAdministered" id="modal_immAdministered" class="required modal-input text ui-widget-content ui-corner-all datepicker" />
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+<div id="createImmunizationDialog" title="Add New Immunization">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="createImmunizationDialogForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Vaccine Type:
+        </div>
+        <div>
+            <input type="text" name="name" id="modal_immName" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+    </fieldset>
+    </form>
+</div>

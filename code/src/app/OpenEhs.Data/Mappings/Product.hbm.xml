@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="OpenEhs.Domain"
+                   namespace="OpenEhs.Domain">
+  <class name="Product" table="Product">
+    <id name="Id" column="ProductID">
+      <generator class="native" />
+    </id>
+    <property name="Name" not-null="true" length="50" />
+    <property name="Unit" not-null="true" length="10" />
+    <property name="Price" column="ProductCost" not-null="true" />
+    <property name="QuantityOnHand" not-null="true" />
+    <property name="Counter" not-null="true" />
+    <property name="IsActive" not-null="true" />
+
+    <many-to-one
+      name="Category"
+      column="CategoryID"
+      class="Category"
+      not-null="true" />
+  </class>
+</hibernate-mapping>

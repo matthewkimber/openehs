@@ -1,0 +1,83 @@
+﻿h2, h3
+{
+    margin-bottom: 10px;
+}
+
+#Actions
+{
+    margin-top: 30px;
+    margin-bottom: 45px;
+}
+
+#Actions input
+{
+   font-family: Segoe, Sans-Serif;
+   font-size: 3.2em;
+   width: 710px;
+   height: 45px;
+}
+
+.ui-button-text
+{
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px 20px 16px 20px !important;
+}
+
+#CreateNewPatientButton
+{
+    float: left;
+}
+
+#Search
+{
+    float: right;
+}
+
+#SearchPatientButton
+{
+    float: right;
+    margin-left: 10px;
+}
+
+#PatientSearchTextBox
+{
+    float: left;
+    width: 550px;
+}
+
+#RecentlyAccessedList table
+{
+    font-size: 1.3em;
+    width: 100%;
+}
+
+#RecentlyAccessedList table td, #RecentlyAccessedList table th
+{
+    padding: 10px;
+}
+
+#RecentlyAccessedList table tr:hover
+{
+    background-color: #c0e0ff;
+}
+
+#RecentlyAccessedList table td
+{
+    cursor: pointer;
+}
+
+.IdColumn
+{
+    width: 10%;
+}
+
+.NameColumn
+{
+}
+
+.DateOfBirthColumn
+{
+    text-align: right;
+    width: 15%;
+}

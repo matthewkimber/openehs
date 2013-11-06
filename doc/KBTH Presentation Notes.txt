@@ -1,0 +1,103 @@
+KBTH Presentation Notes:
+------------------------
+- Login
+---- 
+
+- Dashboard
+---- 
+
+- Patient Creation
+---- Tribe & Race are separate fields.
+-------- What tribes are there?
+-------- What races are there?
+---- Postal code, for future.
+---- Same address button on the emergency contact (copy contents from the first screen).
+---- Occupation & education.
+
+- Patient Details
+---- Roles
+---- Insurance number and expiration date fields.
+---- Search on insurance field.
+---- Health Insurance
+-------- Needs to be integrated in v next.
+---- Who can edit patient information.
+-------- OPD, ... who else?
+---- Vitals
+-------- Units (on add screen)
+-------- Blood Pressure
+------------ Field / Field  <=  Format this way.
+-------- Only one initial vital?
+-------- Variable date/time.
+-------- Inpatient/Outpatient field differences (radio buttons specifically)
+---- Rx List
+-------- Instructions should be a textarea.
+------------ Dosage
+------------ Frequency
+---------------- Dropdown ... Daily (1,2,3,4...), Two Days, Weekly, Monthly.
+------------ Duration
+------------ Route of administration (instructions? Orally, IV, etc.)
+-------- Postback on medications.
+-------- Security Roles
+------------ Pharmacist
+---- Immunizations
+-------- Create New Vaccine
+------------ 
+-------- Default to today's date for administration date.
+---- Chronic Diseases
+-------- Keep it private if we flag.
+------------ OPD Clerks should not see this.
+------------ Ward Clerks (supply consumables to patients (Resources)).
+------------ Physicians, Nurses.
+-------- AIDS not Aids
+-------- Need to be able to remove.
+---- Allergy
+---- Notes
+-------- Printing undefined.
+---- Charting
+-------- What are the various "Feed Types"?
+-------- Units on the various output/input.
+
+- Surgery
+---- More than 1 staff (each field). (add a list of staff)
+---- Add diagnosis (added field).
+---- Description of surgery (appendectomy, etc.) (added field).
+---- Findings (added field).
+
+- PMH
+---- Add some styling to the visit summary stuff. Yikes.
+---- Note Author is backwards. (Last Name, First Name)
+
+- Diagnosis
+---- Make it a TEXTAREA!!!
+---- Initial diagnosis.
+---- Final diagnosis.
+
+- Checkin/Checkout
+---- Who has permission?
+
+- Resources
+---- Rename title from "Billing" to "Resources"
+---- Ward Clerks do this.
+
+- Billing
+---- Make the balance red...stand out.
+---- Should default to pay-in-full.
+---- Auto print when pay-in-full.
+---- Hide payments.
+---- Insurance
+
+- Reports
+---- Coming soon. :(
+
+- Misc.
+---- Buttons aren't very visible. (Check on client computers.)
+
+- Admin
+---- Break these things up into different pages.
+---- Add Inventory / Receiving? (wording)
+
+*** Make most date/time fields auto filled with today's date.
+*** Date of Death _IN_ the demographics.
+
+
+*** Contact chief medical director. To define security roles.

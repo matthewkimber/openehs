@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="OpenEhs.Domain"
+                   namespace="OpenEhs.Domain">
+
+  <class name="SurgeryStaff" table="SurgeryStaff">
+    <id name="Id" column="SurgeryStaffID">
+      <generator class="native" />
+    </id>
+
+    <property name="Role" not-null="true" />
+
+    <many-to-one name="Staff"
+                 class="User"
+                 unique="true"
+                 column="UserID" />
+
+    <many-to-one name="Surgery"
+                 class="Surgery"
+                 unique="true"
+                 column="SurgeryID" />
+
+  </class>
+</hibernate-mapping>

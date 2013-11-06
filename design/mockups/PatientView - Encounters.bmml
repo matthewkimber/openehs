@@ -1,0 +1,66 @@
+<mockup version="1.0" skin="sketch" measuredW="1352" measuredH="937" mockupW="1024" mockupH="870">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="328" y="67" w="1024" h="870" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>OpenEHS</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="440" y="367" w="800" h="543" measuredW="200" measuredH="269" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>PatientView%20-%20Basic%20Information%26bm%3BPatientView%20-%20Basic%20Information.bmml%26bm%3BPatientView%20-%20Basic%20Information.bmml%26bm%3BPatientView%20-%20Basic%20Information.bmml%2CPatientView%20-%20Basic%20Information%26bm%3BPatientView%20-%20Basic%20Information.bmml%26bm%3BPatientView%20-%20Basic%20Information.bmml%26bm%3BPatientView%20-%20Basic%20Information.bmml%2CPatientView%20-%20Diagnosis%20History%26bm%3BPatientView%20-%20Diagnosis%20History.bmml%26bm%3BPatientView%20-%20Diagnosis%20History.bmml%26bm%3BPatientView%20-%20Diagnosis%20History.bmml%2CPatientView%20-%20Prescription%20List%26bm%3BPatientView%20-%20Prescription%20List.bmml%26bm%3BPatientView%20-%20Prescription%20List.bmml%26bm%3BPatientView%20-%20Prescription%20List.bmml%2CPatientView%20-%20Allergies%26bm%3BPatientView%20-%20Allergies.bmml%26bm%3BPatientView%20-%20Allergies.bmml%26bm%3BPatientView%20-%20Allergies.bmml%2CPatientView%20-%20Immunizations%26bm%3BPatientView%20-%20Immunizations.bmml%26bm%3BPatientView%20-%20Immunizations.bmml%26bm%3BPatientView%20-%20Immunizations.bmml%2CPatientView%20-%20Encounters%26bm%3BPatientView%20-%20Encounters.bmml%26bm%3BPatientView%20-%20Encounters.bmml%26bm%3BPatientView%20-%20Encounters.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22112%2C320%2C214%2C353%22%20href%3D%22PatientView%20-%20Basic%20Information.bmml%22%20alt%3D%22PatientView%20-%20Basic%20Information%22%20id%3D%2240_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22112%2C353%2C214%2C386%22%20href%3D%22PatientView%20-%20Basic%20Information.bmml%22%20alt%3D%22PatientView%20-%20Basic%20Information%22%20id%3D%2240_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22112%2C386%2C214%2C419%22%20href%3D%22PatientView%20-%20Diagnosis%20History.bmml%22%20alt%3D%22PatientView%20-%20Diagnosis%20History%22%20id%3D%2240_2%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22112%2C419%2C214%2C452%22%20href%3D%22PatientView%20-%20Prescription%20List.bmml%22%20alt%3D%22PatientView%20-%20Prescription%20List%22%20id%3D%2240_3%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22112%2C452%2C214%2C485%22%20href%3D%22PatientView%20-%20Allergies.bmml%22%20alt%3D%22PatientView%20-%20Allergies%22%20id%3D%2240_4%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22112%2C485%2C214%2C518%22%20href%3D%22PatientView%20-%20Immunizations.bmml%22%20alt%3D%22PatientView%20-%20Immunizations%22%20id%3D%2240_5%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22112%2C518%2C214%2C551%22%20href%3D%22PatientView%20-%20Encounters.bmml%22%20alt%3D%22PatientView%20-%20Encounters%22%20id%3D%2240_6%22/%3E%0A</map>
+        <selectedIndex>6</selectedIndex>
+        <text>Basic%0APMH%0ADx%20History%0ARx%20List%0AAllergies%0AImmunizations%0AEncounters</text>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::BreadCrumbs" x="440" y="292" w="-1" h="-1" measuredW="192" measuredH="25" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Patients%2C%20Search%2C%20Esi%20Kone</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::HRule" x="541" y="421" w="699" h="-1" measuredW="100" measuredH="5" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::Canvas" x="440" y="135" w="800" h="138" measuredW="100" measuredH="70" zOrder="4" locked="false" isInGroup="-1"/>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::ButtonBar" x="438" y="214" w="692" h="59" measuredW="385" measuredH="31" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>Dashboard%26bm%3BDashboard.bmml%26bm%3BDashboard.bmml%26bm%3BDashboard.bmml%2CPatientView%26bm%3BPatientView.bmml%26bm%3BPatientView.bmml%26bm%3BPatientView.bmml%2C%2CBilling%26bm%3BBilling.bmml%26bm%3BBilling.bmml%26bm%3BBilling.bmml%2CAdminView%26bm%3BAdminView.bmml%26bm%3BAdminView.bmml%26bm%3BAdminView.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22110%2C147%2C281%2C206%22%20href%3D%22Dashboard.bmml%22%20alt%3D%22Dashboard%22%20id%3D%2246_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22283%2C147%2C427%2C206%22%20href%3D%22PatientView.bmml%22%20alt%3D%22PatientView%22%20id%3D%2246_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22569%2C147%2C688%2C206%22%20href%3D%22Billing.bmml%22%20alt%3D%22Billing%22%20id%3D%2246_2%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22690%2C147%2C810%2C206%22%20href%3D%22AdminView.bmml%22%20alt%3D%22AdminView%22%20id%3D%2246_3%22/%3E%0A</map>
+        <selectedIndex>1</selectedIndex>
+        <text>Dashboard%2C%20Patients%2C%20Reports%2C%20Billing%2C%20Admin</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::Image" x="450" y="155" w="219" h="46" measuredW="469" measuredH="98" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>../identity/logo/OpenEHS%2520-%2520Logo.png</src>
+      </controlProperties>
+    </control>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::LinkBar" x="1120" y="165" w="-1" h="-1" measuredW="99" measuredH="25" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>-1</selectedIndex>
+        <text>Logout%2C%20Help</text>
+      </controlProperties>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::Label" x="1022" y="165" w="89" h="25" measuredW="87" measuredH="25" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Kwakou%20Addo</text>
+      </controlProperties>
+    </control>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::Label" x="553" y="382" w="-1" h="-1" measuredW="98" measuredH="32" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>KONE%2C%20Esi</text>
+      </controlProperties>
+    </control>
+    <control controlID="51" controlTypeID="com.balsamiq.mockups::Label" x="660" y="385" w="-1" h="-1" measuredW="200" measuredH="25" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>age%2046%20yrs%20%20DOB%3A%2012/10/1964</text>
+      </controlProperties>
+    </control>
+    <control controlID="52" controlTypeID="com.balsamiq.mockups::CheckBox" x="1153" y="386" w="-1" h="-1" measuredW="66" measuredH="22" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>selected</state>
+        <text>Active</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

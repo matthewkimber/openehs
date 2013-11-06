@@ -1,0 +1,59 @@
+﻿@model OpenEhs.Domain.Category
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<style type="text/css">
+    .display-label
+    {
+    	font-weight: bold;
+    }
+</style>
+
+<fieldset>
+    <legend>Category</legend>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">@Model.Name</div>
+
+    <div class="display-label">Description</div>
+    <div class="display-field">@Model.Description</div>
+
+    <div class="display-label">DateCreated</div>
+    <div class="display-field">@String.Format("{0:g}", Model.DateCreated)</div>
+
+    <div class="display-label">IsActive</div>
+    <div class="display-field">@Model.IsActive</div>
+    
+    @if (Model.Products.Count > 0)
+    {
+    <br />
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Qty. Instock</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var product in Model.Products)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.QuantityOnHand</td>
+                <td>@String.Format("{0:c}", product.Price)</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    }
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+

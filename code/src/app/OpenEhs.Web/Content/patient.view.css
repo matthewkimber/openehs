@@ -1,0 +1,1470 @@
+﻿fieldset {
+    clear: both;
+    padding: 20px;
+}
+
+legend 
+{
+    font-size: 1.2em;
+}
+
+.chronicDiseasesRemove
+{
+	padding: 5px; 
+	font-size: 14px; 
+	margin: 3px 10px 3px 0px;
+}
+
+.column {
+    float: left;
+    margin-right: 20px;
+}
+
+#surgeryPrewrittenNoteSelect
+{
+	margin-left: 105px;
+}
+
+.modal-label {
+    display: block;
+    float: left;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 2px;
+    text-align: right;
+    width: 100px;
+    font-size: 1.2em;
+}
+
+.modal-label-long {
+    display: block;
+    float: left;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 2px;
+    text-align: right;
+    width: 150px;
+    font-size: 1.2em;
+}
+
+.modal-input {
+    font-size: 1.2em;
+    padding: 4px;
+    border: solid 1px #777777;
+    width: 125px;
+    margin-bottom: 5px;
+}
+
+.modal-input-small {
+    font-size: 1.2em;
+    padding: 4px;
+    border: solid 1px #777777;
+    width: 40px;
+    margin-bottom: 5px;
+}
+.modal-input .datepicker {
+    margin-right: 5px;
+}
+
+.modalErrorContainer {
+    padding: 5px 20px 5px 20px;
+    margin-right: 40px;
+    margin-bottom: 5px;
+}
+
+.modalErrorContainer li {
+    list-style-type: circle;
+    color: #FF0000;
+}
+
+#newCheckInButton
+{
+    height: 40px;
+    width: 95px;
+    float: right; 
+    margin-right: 10px; 
+    font-size: 10px;
+    font-weight: bold;
+    border-bottom-width: medium;
+    border-left-width: medium;
+    border-right-width: medium;
+    border-top-width: medium;
+    background: -moz-linear-gradient(top,  #004C00,  #B2E0B2);
+    color: white;
+}
+
+#editPatientInfoButton
+{
+    height: 40px;
+    width: 95px;
+    float: right; 
+    margin-right: 10px; 
+    font-size: 10px;
+    font-weight: bold;
+    border-bottom-width: medium;
+    border-left-width: medium;
+    border-right-width: medium;
+    border-top-width: medium;
+}
+
+#savePatientInfoButton
+{
+    height: 40px;
+    width: 95px;
+    float: right; 
+    margin-right: 10px; 
+    font-size: 10px;
+    font-weight: bold;
+    border-bottom-width: medium;
+    border-left-width: medium;
+    border-right-width: medium;
+    border-top-width: medium;
+}
+
+#checkOutButton
+{
+    height: 40px;
+    width: 95px;
+    float: right; 
+    margin-right: 10px; 
+    font-size: 10px;
+    font-weight: bold;
+    border-bottom-width: medium;
+    border-left-width: medium;
+    border-right-width: medium;
+    border-top-width: medium;
+    background: -moz-linear-gradient(top,  #990000,  #FFB2B2);
+    color: white;
+}
+
+#BasicInformationColumn {
+    float: left;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#BasicInformationNotes {
+    float: left;
+}
+
+#Id {
+    width: 80px;
+}
+
+#FirstName, #MiddleName, #LastName, #PhoneNumber, #InsuranceNumber, #Address_Street1, #Address_Street2, #Address_Country, #EmergencyContact_Address_Country, #CreationDate {
+    width: 125px;
+}
+
+#DateOfBirth, #InsuranceExpiration {
+    width: 80px;
+}
+
+#Address_City, #Address_Region {
+    width: 125px;
+}
+
+#patientViewHeader 
+{
+    height: 50px;
+    border: 1px solid #aaa;
+    background-color: #eee;
+    clear: both;
+    line-height: 50px;
+    margin-left: 170px;
+    margin-bottom: 0px;
+    padding-left: 28px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#patientInfo
+{
+    float: left;
+    width: 425px;
+}
+
+#ageInfo
+{
+    font-weight: normal;
+    float: left;
+}
+
+#patientViewHeader h2 {
+    float: left;
+    padding: 0px;
+}
+
+#patientViewHeader div 
+{
+    padding-top: 5px;
+}
+
+#allergiesHeader {
+    margin-left: 20px;
+    padding: 1px;
+}
+
+#allergiesTable {
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+#allergiesTable td {
+    width: 150px;
+}
+
+#vitalsHeader
+{
+    padding-right: 10px;
+    clear: both;
+}
+
+#allergyHeader
+{
+	padding-right: 10px;
+    clear: both;
+}
+
+#medicationHeader
+{
+	padding-right: 10px;
+    clear: both;
+}
+
+#chronicDiseasesHeader
+{
+	padding-right: 10px;
+    clear: both;
+}
+
+#surgeryHeader
+{
+	padding-right: 10px;
+    clear: both;
+}
+
+#chronicDiseasesHeader input
+{
+    margin-top: 15px;
+    float: right;
+    height: 35;
+    width: 60px;
+    font-size: 15px;
+}
+
+#chronicDiseasesHeader h2
+{
+    float: left;
+}
+
+#allergyHeader h2
+{
+    float: left;
+}
+
+#medicationHeader h2
+{
+    float: left;
+}
+
+#vitalsHeader h2
+{
+    float: left;
+}
+
+#vitalsHeader input
+{
+    margin-top: 15px;
+    float: right;
+    height: 35;
+    width: 60px;
+    font-size: 15px;
+}
+
+#allergyHeader input
+{
+    margin-top: 15px;
+    float: right;
+    height: 35;
+    font-size: 15px;
+}
+
+#selectAction
+{
+	margin: 2px 2px 2px 2px;
+}
+
+#medicationHeader input
+{
+    margin-top: 15px;
+    float: right;
+    height: 35;
+    width: 60px;
+    font-size: 15px;
+}
+
+#noteTextBox
+{
+    width: 150px;
+}
+
+fieldset
+{
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#BasicMoreInfoLink
+{
+    clear: both;
+    color: #00f;
+    cursor: pointer;
+    margin: 10px 0px 5px 0px;
+}
+
+#BasicMoreInfo
+{
+    clear: both;
+    display: none;
+}
+
+#AddressLink
+{
+    clear: both;
+    color: #00f;
+    cursor: pointer;
+    margin: 10px 0px 5px 0px;
+}
+
+#BasicAddress
+{
+    clear: both;
+    display: none;
+}
+
+#EmergencyContactMoreInfoLink {
+    color: #00f;
+    cursor: pointer;
+    margin: 10px 0px 5px 0px;
+}
+
+#EmergencyContactMoreInfo {
+    display: none;
+}
+
+#ChronicDiseaseList li
+{
+    font-size: 1.4em;
+    list-style: none;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    width: 600px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 50px;
+    line-height: 50px;
+	padding-left: 10px;
+	margin-left: 15px;
+}
+
+#ChronicDiseaseList
+{
+	margin-top: 40px;
+}
+
+#allergyList li
+{
+    font-size: 1.4em;
+    list-style: none;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    width: 600px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 50px;
+    line-height: 50px;
+	padding-left: 10px;
+	margin-left: 15px;
+}
+
+#allergyList
+{
+	margin-top: 40px;
+}
+
+#visitHistoryList li
+{
+    font-size: 1.2em;
+    list-style: none;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    padding: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 40px; 
+    width: 650px;
+    margin-top: 50px;
+}
+
+#visitSearchResultsUL li
+{
+    font-size: 1.2em;
+    list-style: none;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    width: 600px;
+    padding: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#visitSearchResults
+{
+	margin-left: 40px;
+}
+
+#NoRecordedVisits
+{
+    font-size: 1.2em;
+    list-style: none;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    width: 600px;
+    padding: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px; 
+}
+
+#medicationAddButton {
+    margin-right: 10px;
+}
+
+.MedicationList
+{
+	font-size: 1.2em;
+    list-style: none;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    width: 600px;
+    padding: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+#MedicationListOne li
+{
+    font-size: 1.2em;
+    list-style: none;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    width: 600px;
+    padding: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+#MedicationListTwo li
+{
+    font-size: 1.2em;
+    list-style: none;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    width: 600px;
+    padding: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+#MedicationListThree li
+{
+    font-size: 1.2em;
+    list-style: none;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    width: 600px;
+    padding: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+#MedicationListFour li
+{
+    font-size: 1.2em;
+    list-style: none;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    width: 600px;
+    padding: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+#immunizationHeader
+{
+	padding-left: 10px;
+	clear: both;
+}
+
+#noteHeader
+{
+	padding-left: 10px;
+	clear: both;
+}
+
+#noteHeader h2
+{
+	float: left;
+}
+
+#noteHeader input
+{
+	margin-top: 15px;
+    float: right;
+    margin-right: 11px;
+    height: 35;
+    width: 110px;
+    font-size: 15px;
+}
+
+#immunizationHeader h2
+{
+    float: left;
+}
+
+#immunizationHeader input
+{
+    margin-top: 15px;
+    float: right;
+    margin-right: 11px;
+    height: 35;
+    width: 60px;
+    font-size: 15px;
+}
+
+#BasicInformationNotes button
+{
+    margin-left: 35px;
+	clear: both;
+	height: 30px;
+	width: 150px;
+	font-size: 18px;
+}
+
+#immunizationListOne li
+{
+    font-size: 1.2em;
+    list-style: none;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    width: 600px;
+    padding: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+#immunizationListTwo li
+{
+    font-size: 1.2em;
+    list-style: none;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    width: 600px;
+    padding: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+#visitHistoryHeader
+{
+	padding-left: 10px;
+	clear: both;
+}
+
+#visitHistoryHeader h2
+{
+    float: left;
+}
+
+#immunizationInfoLink
+{
+    clear: both;
+    color: #00f;
+    cursor: pointer;
+    margin: 10px 0px 5px 40px;
+    font-size: 15px;
+}
+
+#immunizationMoreInfo
+{
+    clear: both;
+    display: none;
+}
+
+#immunizationTitle
+{
+    margin-left: 40px
+}
+
+#rxTitle
+{
+    margin-left: 40px
+}
+
+#visitTitle
+{
+    margin-left: 40px
+}
+
+#visitTitle2
+{
+    margin-left: 40px
+}
+
+#rxInfoLink
+{
+    clear: both;
+    color: #00f;
+    cursor: pointer;
+    margin: 10px 0px 5px 40px;
+    font-size: 15px;
+}
+
+#rxMoreInfo
+{
+    clear: both;
+    display: none;
+}
+
+#visitVitalsLink
+{
+    clear: both;
+    color: #00f;
+    cursor: pointer;
+}
+
+#visitVitalsMoreInfo
+{
+    clear: both;
+    display: none;
+}
+
+#visitPastMoreInfo
+{
+    clear: both;
+    display: none;
+}
+
+#h3ID
+{
+    margin-left: 40px;
+}
+
+#visitPastLink
+{
+    clear: both;
+    color: #00f;
+    cursor: pointer;
+    margin: 10px 0px 5px 40px;
+    font-size: 15px;
+}
+
+#vitalHistory
+{
+    font-size: 10px;
+}
+
+#vitalHistorySearch
+{
+    font-size: 10px;
+}
+
+table.vitalsHist {
+	background-color: white;
+}
+
+table.vitalsHistSearch {
+	background-color: white;
+}
+
+table.vitalsHist th {
+	background-color: #BDBDBD;
+}
+
+#vitalsHistorySearch input
+{
+    margin-top: 15px;
+}
+
+#from
+{
+    width: 100px;
+    height: 25px;
+}
+
+#to
+{
+    width: 100px;
+    height: 25px;
+}
+
+#pastVisitFieldSet
+{
+    width: 390px;
+    padding-left: 40px;
+}
+
+#searchHistoryResultList
+{
+font-size: 1.2em;
+list-style: none;
+background-color: #eee;
+border: 1px solid #aaa;
+width: 600px;
+padding: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+margin-bottom: 10px;  
+}
+
+#visitVitalsMoreInfoSearch
+{
+    clear: both;
+    display: none;
+}
+
+#visitVitalsLinkSearch
+{
+    clear: both;
+    color: #00f;
+    cursor: pointer;
+}
+
+#visitNoteMoreInfoSearch
+{
+    clear: both;
+    display: none;
+}
+
+#visitNoteLinkSearch
+{
+    clear: both;
+    color: #00f;
+    cursor: pointer;
+}
+
+#visitVitalsLink1
+{
+    clear: both;
+    color: #00f;
+    cursor: pointer;
+}
+
+#visitVitalsMoreInfo1
+{
+    clear: both;
+    display: none;
+}
+
+#vitalHistory1
+{
+    font-size: 10px;
+}
+
+#visitHistorySearchList li
+{
+    font-size: 1.2em;
+    list-style: none;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    padding: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px; 
+    margin-left: 40px;
+    width: 650px;
+}
+
+#visitHistorySearchList td
+{
+    border: 1px solid #ccc;
+}
+
+#visitHistoryList td
+{
+    border: 1px solid #ccc;
+}
+
+#vitalsTable td
+{
+    border: 1px solid #ccc;
+}
+
+#isActivePatient 
+{
+    border: 1px solid gray;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 10px 5px;
+    margin-bottom: 15px;
+    margin-top: 7px;
+}
+
+#selectSearchTable
+{
+    margin-left: 40px;
+    font-size: 10px;
+}
+
+#selectSearchTable td
+{
+    border: 1px solid #ccc;
+}
+
+#staffName
+{
+    margin-left: 100px;
+}
+
+#modal_GetStaffSurgeon
+{
+    margin-left: 120px;
+}
+
+#modal_GetStaffSurgeonAssistant
+{
+    margin-left: 66px;
+}
+
+#modal_GetStaffAnaesthetist
+{
+    margin-left: 99px;
+}
+
+#modal_GetStaffAnaesthetistAssistant
+{
+    margin-left: 45px;
+}
+
+#modal_GetStaffNurse
+{
+    margin-left: 133px;
+}
+
+#modal_GetStaffConsultant
+{
+    margin-left: 107px;
+}
+
+#surgeryStaffFieldSet
+{
+    width: 300px;
+}
+
+#SurgeryStaff
+{
+	float: left;
+}
+
+#SurgeryNotes
+{
+    float: left;
+    margin-left: 10px;
+    width: 390px;
+    margin-top: 15px;
+}
+
+#surgeryCompleteDIV
+{
+	float: left;
+    margin-left: 10px;
+    width: 390px;
+    margin-top: 20px;
+}
+
+#surgeryNoteLable
+{
+	font-size: 15px;
+	margin-bottom: 8px;
+}
+
+#SurgeryNoteTemp
+{
+	float: left;
+	width: 390px;
+	margin-left: 10px;
+}
+
+#templateCheckBox
+{
+	margin-top: 1px;
+	margin-left: 140px;
+}
+
+#surgeryEndTimeLable
+{
+    margin-left: 100px;
+}
+
+#surgeryStartTime
+{
+    width: 100px;
+}
+
+#surgeryEndTime
+{
+    width: 100px;
+    margin-left: 50px;
+}
+
+#modal_GetSurgeryLocation
+{
+    width: 140px;
+    margin-left: 15px;
+}
+
+#submitSurgery
+{
+    float: left;
+    margin-left: 70px;
+    margin-top: 15px;
+    width: 250px;
+    font-size: 20px;
+}
+
+#chartingHeader
+{
+	padding-right: 10px;
+    clear: both;
+}
+
+#caseType1
+{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+
+
+#feedAddButton
+{
+    height: 35;
+    width: 75px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#intakeAddButton
+{
+    height: 35;
+    width: 90px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#suctionAddButton
+{
+    height: 35;
+    width: 110px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#urineAddButton
+{
+    height: 35;
+    width: 110px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#stoolAddButton
+{
+    height: 35;
+    width: 110px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#Suction
+{
+    text-align: center;
+}
+
+#Urine
+{
+    text-align: center;
+}
+
+#Stool
+{
+    text-align: center;
+}
+
+.bottomRow
+{
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+}
+
+.pmhHistoryList li
+{
+    font-size: 1.2em;
+    list-style: none;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    padding: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 40px; 
+    width: 650px;
+}
+
+.surgeryInfo
+{
+    display: none;
+}
+
+.surgeryLink
+{
+    color: #00f;
+    cursor: pointer;
+    margin: 1px 0px 5px 0px;
+    font-size: 12px;
+}
+
+.noteInfo
+{
+    display: none;
+}
+
+.noteLink
+{
+    color: #00f;
+    cursor: pointer;
+    margin: 1px 0px 5px 0px;
+    font-size: 12px;
+}
+
+.visitNoteLink
+{
+	color: #00f;
+    cursor: pointer;
+    margin: 1px 0px 5px 0px;
+    font-size: 12px;
+}
+
+.visitNoteMoreInfo
+{
+	display: none;
+}
+
+.visitVitalsLink
+{
+	color: #00f;
+    cursor: pointer;
+    margin: 1px 0px 5px 0px;
+    font-size: 12px;
+}
+
+.visitVitalsMoreInfo
+{
+	display: none;
+}
+
+.staffInfo
+{
+    display: none;
+}
+
+.staffLink
+{
+    color: #00f;
+    cursor: pointer;
+    margin: 1px 0px 5px 0px;
+    font-size: 12px;
+}
+
+.staffMargin
+{
+	margin-left: 20px;
+}
+
+.titlePMH
+{
+    margin-left: 100px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#recentHeader
+{
+    font-size: 18px;
+}
+
+#searchButtonLayout
+{
+    margin-top: 15px;
+    margin-right: 11px;
+    height: 35;
+    width: 150px;
+    font-size: 12px;
+}
+
+#pmhSelectList
+{
+    font-size: 1.2em;
+    list-style: none;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    width: 600px;
+    padding: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+#crumbs
+{
+	font-size: 1.3em;
+	font-weight: bold;
+	list-style: none;
+	border: 1px solid #999;
+	height: 2.3em;
+	margin: 5px 0 25px 0;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	width: 15%;
+}
+
+#crumbs li
+{
+	float: left;
+	line-height: 2.3em;
+	padding-left: 0.75em;
+	color: #555;
+}
+
+#crumbs li a 
+{
+	display: block;
+	padding: 0 15px 0 0;
+	background: url("../images/crumbs.gif") no-repeat right center;
+}
+
+#crumbs li a:link, #crumbs li a:visited 
+{
+	text-decoration: none;
+	color: #555;
+}
+
+#crumbs li a:hover, #crumbs li a:focus 
+{
+	color: #47a5ff;
+}
+
+
+#selectVisitDiv input
+{
+    padding: 4px;
+    height: 35;
+    width: 100px;
+    font-size: 20px;
+}
+
+#summaryTitle
+{
+	margin-top: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: Fantasy;
+	margin-left: 20;
+}
+
+#replaceDIV
+{
+	margin-top: 30px;
+	font-size: 18px;
+}
+
+#feedChartReplace
+{
+	margin-top: 10px;
+	font-size: 18px;
+}
+
+#intakeChartReplace
+{
+    margin-top: 10px;
+	font-size: 18px;
+}
+
+.detailsTable
+{
+	font-size: 8px;
+	width: 210px;
+}
+
+.detailsTable td
+{
+	border: 1px solid #ccc;
+}
+
+.intakeTable td
+{
+	border: 1px solid #ccc;
+}
+
+#AddInvoiceItemFieldSet
+{
+    width: 225px;
+}
+
+#showLineItemsFS
+{
+	width: 210px;
+}
+
+.billingSelects
+{
+	width: 130px;
+}
+
+#showLineItems
+{
+	float: left;
+	margin-left: 50px;
+	margin-top: 20px;
+}
+
+#AddInvoiceItem
+{
+	float: left;
+	margin-top: 20px;
+}
+
+#submitInvoiceItem
+{
+	margin-left: 80px;
+}
+
+#submitInvoiceItemService
+{
+	margin-left: 80px;
+}
+
+#selection
+{
+    margin-left: 100px;
+}
+
+#modal_GetProduct
+{
+    margin-left: 40px;
+}
+
+#modal_GetService
+{
+    margin-left: 42px;
+}
+
+#modal_GetQuantity
+{
+    margin-left: 38px;
+}
+
+.visitSummaryList
+{
+    list-style: none;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    padding: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 20px; 
+    width: 650px;
+}
+
+.visitSummaryHeader
+{
+    text-align: center;
+}
+
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header{ margin-bottom: 8px; }
+.ui-timepicker-div dl{ text-align: left; }
+.ui-timepicker-div dl dt{ height: 25px; }
+.ui-timepicker-div dl dd{ margin: -25px 0 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+
+
+#autoCompleteTemplate
+{
+	width: 330px;
+}
+
+.outputTopRow
+{
+    text-align: center;
+}
+
+#Notes
+{
+    float: left;
+    margin-left: 23px;
+    width: 600px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+#templateOptions
+{
+	width: 550px;
+	margin-left: 26px;
+}
+
+#autocompleteNotes
+{
+	width: 150px;
+	background: #FFFFCC;
+}
+
+#templateNoteCheckBox
+{
+	float: left;
+	margin-left: 210px;
+	margin-top: 10px;
+}
+
+#pmhChartLink
+{
+    clear: both;
+    color: #00f;
+    cursor: pointer;
+}
+
+#pmhSurgeryInfo
+{
+    clear: both;
+    display: none;
+}
+
+#pmhSurgeryLink
+{
+    clear: both;
+    color: #00f;
+    cursor: pointer;
+}
+
+#pmhNoteInfo
+{
+    clear: both;
+    display: none;
+}
+
+#pmhNoteLink
+{
+    clear: both;
+    color: #00f;
+    cursor: pointer;
+}
+
+#pmhChartInfo
+{
+    clear: both;
+    display: none;
+}
+
+#centerForOutputChart
+{
+	text-align: center;
+}
+
+#prewrittenNoteSelect
+{
+	margin-left: 150px;
+	width: 250px;
+}
+
+#submittedNoteList
+{
+	font-size: 1.2em;
+    list-style: none;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    width: 600px;
+    padding: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+#addTempTitleDIV
+{
+	margin-top: 20px;
+}
+
+#templateTitleFS
+{
+	width: 200px;
+	margin-left: 155px;
+}
+
+#templateTitle
+{
+	width: 190px;
+}
+
+#templateNoteCheckBox
+{
+	margin-bottom: 5px;
+}
+
+#NoteList li
+{
+    font-size: 1.4em;
+    list-style: none;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    width: 600px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 50px;
+    line-height: 50px;
+	padding-left: 10px;
+	margin-left: 15px;
+}
+
+#NoteList
+{
+	margin-top: 40px;
+}

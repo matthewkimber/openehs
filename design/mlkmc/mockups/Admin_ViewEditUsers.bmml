@@ -1,0 +1,47 @@
+<mockup version="1.0" skin="sketch" measuredW="887" measuredH="459" mockupW="450" mockupH="400">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="427" y="49" w="-1" h="-1" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <close>true</close>
+        <maximizeRestore>true</maximizeRestore>
+        <minimize>true</minimize>
+        <text>MLKMC%20-%20Admin%3A%20View/Edit%20Users</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::HRule" x="442" y="126" w="420" h="-1" measuredW="100" measuredH="5" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::HRule" x="442" y="161" w="420" h="-1" measuredW="100" measuredH="5" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="442" y="131" w="-1" h="-1" measuredW="190" measuredH="29" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Admin%3A%20View/Edit%20Users</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::ButtonBar" x="442" y="86" w="-1" h="-1" measuredW="243" measuredH="31" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>1</selectedIndex>
+        <text>Create%20User%2C%20View/Edit%20Users</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::DataGrid" x="445" y="178" w="417" h="153" measuredW="261" measuredH="178" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Username%2C%20Password%2C%20Privileges%0AAsare%2C%20hi123%2C%20nurse%0AAnsere%2C%20bye321%2C%20doctor%0AOppong%2C%20yes99no%2C%20receptionist%0ADuah%2C%20pass456%2C%20admin-doctor%0AOsei%2C%20789pass%2C%20admin</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Button" x="442" y="361" w="-1" h="-1" measuredW="126" measuredH="28" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Change%20Password</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Button" x="599" y="361" w="-1" h="-1" measuredW="106" measuredH="28" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Remove%20User</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Button" x="733" y="361" w="-1" h="-1" measuredW="129" measuredH="28" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Change%20Privileges</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

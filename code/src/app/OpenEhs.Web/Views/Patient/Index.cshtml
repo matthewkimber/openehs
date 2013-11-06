@@ -1,0 +1,125 @@
+﻿@model OpenEhs.Web.Models.PatientSearchViewModel
+@{
+    ViewBag.Title = "Patients";
+}
+@section head
+{
+    <link href="@Url.Content("~/Content/patient.main.css")" rel="Stylesheet" type="text/css" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#CreateNewPatientButton").button();
+            $("#SearchPatientButton").button();
+
+            $("#RecentlyAccessedList table tr").click(function () {
+                var href = $(this).find("a").attr("href");
+
+                if (href) {
+                    window.location = href;
+                }
+            });
+
+            $("#patients-tab").addClass("current");
+
+            // Set focus on the search box on load.
+            $("#PatientSearchTextBox").focus();
+
+            // Zebra stripe the recently accessed list.
+            $("#RecentlyAccessedList tbody tr:odd").addClass("striped");
+        });
+    </script>
+}
+<h2>
+    Patients
+</h2>
+<div id="Actions" class="group">
+    @Html.ActionLink("New Patient", "Create", null, new { id = "CreateNewPatientButton" })
+    <div id="Search" class="group">
+        @using (Html.BeginForm("Index", "Patient"))
+        {
+            <input type="text" name="PatientSearchTextBox" id="PatientSearchTextBox" />
+            <button name="Search" id="SearchPatientButton">
+                Search</button>
+        }
+        <script type="text/javascript">
+            $(function () {
+                $("#PatientSearchTextBox").autocomplete({
+                    source: "/Patient/AutocompleteSuggestions",
+                    minLength: 3,
+                    select: function (event, ui) {
+                        if (ui.item) {
+                            $("#PatientSearchTextBox").val(ui.item.value);
+                            var splitItem = ui.item.value.split("[");
+                            var splitItem2 = splitItem[1].split("]");
+                            window.location.href = "/Patient/Details/" + splitItem2[0];
+                            //$("form").submit();
+                        }
+                    }
+                });
+            });
+        </script>
+    </div>
+</div>
+<h3>
+    @if (string.IsNullOrEmpty(Model.SearchTerm))
+    {
+        <text>Recently Accessed List</text>
+    }
+    else
+    {
+        string searchTerms = "";
+        string[] terms = Model.SearchTerm.Split('|');
+        foreach (string term in terms)
+        {
+            if (!string.IsNullOrEmpty(term))
+            {
+                if (!string.IsNullOrEmpty(searchTerms))
+                {
+                    searchTerms += ", ";
+                }
+                searchTerms += string.Format("\"{0}\"", term);
+            }
+        }
+        
+        <text> Showing search results for matches on: @searchTerms </text>
+    }
+</h3>
+<div id="RecentlyAccessedList">
+    <table>
+        <thead>
+            <tr>
+                <th class="IdColumn">
+                    ID #
+                </th>
+                <th class="NameColumn">
+                    Name
+                </th>
+                <th class="DateOfBirthColumn">
+                    Age
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var patient in Model.Patients)
+            {
+                <tr>
+                    <td class="IdColumn">
+                        @String.Format("{0}", patient.Id)
+                    </td>
+                    <td class="NameColumn">
+                        @if (patient.MiddleName != String.Empty)
+                        {
+                            @Html.ActionLink(String.Format("{2}, {0} {1}", patient.FirstName, patient.MiddleName, patient.LastName.ToUpper()), "Details", new { id = patient.Id })
+                        }
+                        else
+                        {
+                            @Html.ActionLink(String.Format("{1}, {0}", patient.FirstName, patient.LastName.ToUpper()), "Details", new { id = patient.Id })
+                        }
+                    </td>
+                    <td class="DateOfBirthColumn">
+                        @patient.Age
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

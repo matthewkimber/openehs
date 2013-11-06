@@ -1,0 +1,196 @@
+﻿@model OpenEhs.Web.Models.CreatePatientViewModel
+@{
+    ViewBag.Title = "Create New Patient";
+    HtmlHelper.ClientValidationEnabled = true;
+    HtmlHelper.UnobtrusiveJavaScriptEnabled = true;   
+}
+@section head
+{
+    <link href="@Url.Content("~/Content/patient.create.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/bbq.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.form.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.8.5.custom.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.form.wizard-3.0.4.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.ui.datepicker-en-GB.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/patient/create.main.js")" type="text/javascript"></script>
+}
+<div id="newPatientContainer" class="group">
+    <h2>
+        New Patient</h2>
+    @using (Html.BeginForm("Create", "Patient", FormMethod.Post, new { @id = "createPatientForm", @class = "group" })) 
+	{
+        <div>
+            @Html.ValidationSummary(false)
+        </div>
+        <div id="basicInformation" class="step">
+            <h3>
+                Basic Information</h3>
+            <div class="group">
+                <div class="fieldGroup group">
+                    @Html.LabelFor(m => m.FirstName)
+                    @Html.TextBoxFor(m => m.FirstName)
+                </div>
+                <div class="fieldGroup group">
+                    @Html.LabelFor(m => m.MiddleName)
+                    @Html.TextBoxFor(m => m.MiddleName)
+                </div>
+                <div class="fieldGroup group">
+                    @Html.LabelFor(m => m.LastName)
+                    @Html.TextBoxFor(m => m.LastName)
+                </div>
+            </div>
+            <div class="group">
+                <div class="fieldGroup group">
+                    @Html.LabelFor(m => m.PlaceOfBirth)
+					@Html.TextBoxFor(m => m.PlaceOfBirth)
+                </div>
+				<div class="fieldGroup group">
+					<label for="Age">Age</label>
+					<input type="text" maxlength="3" name="Age" id="Age" />
+				</div>
+                <div class="fieldGroup group">
+                    @Html.LabelFor(m => m.DateOfBirth)
+                    @Html.EditorFor(m => m.DateOfBirth)
+                </div>
+            </div>
+			<div class="group">
+				<div class="fieldGroup group">
+						@Html.LabelFor(m => m.Gender)
+						@Html.DropDownListFor(m => m.SelectedGender , Model.Gender)
+                </div>
+				<div class="fieldGroup group">
+						@Html.LabelFor(m => m.MaritalStatus)
+						@Html.DropDownListFor(m => m.SelectedMaritalStatus , Model.MaritalStatus)
+                </div>
+                <div class="fieldGroup group">
+                    @Html.LabelFor(m => m.OldPhysicalRecordNumber)
+                    @Html.TextBoxFor(m => m.OldPhysicalRecordNumber)
+                </div>
+			</div>
+            <div class="group">
+                <div class="fieldGroup group">
+                    @Html.LabelFor(m => m.PhoneNumber)
+                    @Html.TextBoxFor(m => m.PhoneNumber)
+                </div>
+                <div class="fieldGroup group">
+                    @Html.LabelFor(m => m.Tribes)
+                    @Html.DropDownListFor(m => m.SelectedTribe, Model.Tribes)
+                </div>
+				<div class="fieldGroup group">
+                    @Html.LabelFor(m => m.Races)
+                    @Html.DropDownListFor(m => m.SelectedRace, Model.Races)
+                </div>
+            </div>
+
+			<div class="group">
+				<div class="fieldGroup group">
+                    @Html.LabelFor(m => m.Religions)
+                    @Html.DropDownListFor(m => m.SelectedReligion, Model.Religions)
+                </div>
+				<div class="fieldGroup group">
+                    @Html.LabelFor(m => m.Education)
+                    @Html.DropDownListFor(m => m.SelectedEducation , Model.Education)
+                </div>
+				<div class="fieldGroup group">
+                    @Html.LabelFor(m => m.pOccupation)
+                    @Html.TextBoxFor(m => m.pOccupation , Model.pOccupation)
+                </div>
+			</div>
+
+			<div class="group">
+				<div class="fieldGroup group">
+                    @Html.LabelFor(m => m.InsuranceNumber)
+                    @Html.TextBoxFor(m => m.InsuranceNumber, Model.InsuranceNumber)
+                </div>
+				<div class="fieldGroup group">
+                    @Html.LabelFor(m => m.InsuranceExpiration)
+                    @Html.EditorFor(m => m.InsuranceExpiration)
+                </div>
+			</div>
+
+            <fieldset>
+                <legend>Address</legend>
+                <div class="group">
+                    <div class="fieldGroup group">
+                        @Html.LabelFor(m => m.Street1)
+                        @Html.TextBoxFor(m => m.Street1)
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="fieldGroup group">
+                        @Html.LabelFor(m => m.Street2)
+                        @Html.TextBoxFor(m => m.Street2)
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="fieldGroup group">
+                        @Html.LabelFor(m => m.City)
+                        @Html.TextBoxFor(m => m.City)
+                    </div>
+                    <div class="fieldGroup group">
+                        @Html.LabelFor(m => m.Region)
+                        @Html.DropDownListFor(m => m.Region, Model.Regions)
+                    </div>
+                    <div class="fieldGroup group">
+                        @Html.LabelFor(m => m.Country)
+                        @Html.DropDownListFor(m => m.Country, Model.Countries)
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div id="emergencyContactInformation" class="step">
+            <h3>
+                Emergency Contact</h3>
+            <div class="group">
+                <div class="fieldGroup group">
+                    @Html.LabelFor(m => m.EcFirstName)
+                    @Html.TextBoxFor(m => m.EcFirstName)
+                </div>
+                <div class="fieldGroup group">
+                    @Html.LabelFor(m => m.EcLastName)
+                    @Html.TextBoxFor(m => m.EcLastName)
+                </div>
+            </div>
+            <div class="group">
+                <div class="fieldGroup group">
+                    @Html.LabelFor(m => m.EcPhoneNumber)
+                    @Html.TextBoxFor(m => m.EcPhoneNumber)
+                </div>
+                <div class="fieldGroup group">
+                    @Html.LabelFor(m => m.EcRelationship)
+                    @Html.DropDownListFor(m => m.EcRelationship, Model.Relationships)
+                </div>
+            </div>
+            <fieldset>
+                <legend>Address</legend>
+                <input class="navigation_button" id="copy" value="Copy from Patient" type="button" />
+                <div class="group">
+                    <div class="fieldGroup group">
+                        @Html.LabelFor(m => m.EcStreet1)
+                        @Html.TextBoxFor(m => m.EcStreet1)
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="fieldGroup group">
+                        @Html.LabelFor(m => m.EcCity)
+                        @Html.TextBoxFor(m => m.EcCity)
+                    </div>
+                    <div class="fieldGroup group">
+                        @Html.LabelFor(m => m.EcRegion)
+                        @Html.DropDownListFor(m => m.EcRegion, Model.Regions)
+                    </div>
+                    <div class="fieldGroup group">
+						@Html.LabelFor(m => m.EcCountry)
+                        @Html.DropDownListFor(m => m.EcCountry, Model.Countries)
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div id="createPatientNavigation">
+            <input class="navigation_button" id="back" value="Back" type="reset" />
+            <input class="navigation_button" id="next" value="Next" type="submit" />
+        </div>    
+    }
+</div>

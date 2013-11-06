@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="OpenEhs.Domain"
+                   namespace="OpenEhs.Domain">
+
+  <class name="Problem" table="Problem">
+    <id name="Id" column="ProblemID">
+      <generator class="native" />
+    </id>
+    <property name="ProblemName" not-null="true" length="30" />
+
+    <bag name="Patients" table="PatientProblem" cascade="none" lazy="false">
+      <key column="ProblemID" />
+      <one-to-many class="PatientProblem" />
+    </bag>
+    
+  </class>
+</hibernate-mapping>

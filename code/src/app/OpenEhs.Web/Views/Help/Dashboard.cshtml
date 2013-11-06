@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = " Help -> Dashboard";
+}
+@section head{
+    <script type="text/javascript">
+        $(function () {
+            $("#accordion").accordion();
+        });
+    </script>
+    <style type="text/css">
+        #accordion {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+}
+@Html.ActionLink("Back to Help", "Index")
+<br />
+<br />
+<h1>
+    Dashboard</h1>
+<br />
+<p>
+    The Dashboard is a quick way to access a patient that is checked into a specific
+    location.
+</p>
+<div id="accordion">
+    <h3>
+        <a href="#">1. Click on the 'Dashboard' button.</a>
+    </h3>
+    <div>
+        <img src="/images/help/Dashboard1.PNG" alt="Dashboard image 1" width="99%" />
+    </div>
+    <h3>
+        <a href="#">2. Click on the Drop-Down arrow of the 'Select Location' box.</a>
+    </h3>
+    <div>
+        <img src="/images/help/Dashboard2.PNG" alt="Dashboard image 2" width="99%" />
+    </div>
+    <h3>
+        <a href="#">3. Select a location from the list</a>
+    </h3>
+    <div>
+        <img src="/images/help/Dashboard3.PNG" alt="Dashboard image 3" width="99%" />
+    </div>
+    <h3>
+        <a href="#">4. Click the 'Show Checkins' button</a>
+    </h3>
+    <div>
+        <img src="/images/help/Dashboard4.PNG" alt="Dashboard image 4" width="99%" />
+    </div>
+    <h3>
+        <a href="#">5. The patients checked into that location will be listed below</a>
+    </h3>
+    <div>
+        <img src="/images/help/Dashboard5.PNG" alt="Dashboard image 5" width="99%" />
+    </div>
+    <h3>
+        <a href="#">6. Click on the row containing the desired patient to be taken directly
+            to that patient's information.</a>
+    </h3>
+    <div>
+    </div>
+</div>
+@Html.ActionLink("Back to Help", "Index")

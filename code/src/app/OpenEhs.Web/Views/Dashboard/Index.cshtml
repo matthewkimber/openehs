@@ -1,0 +1,51 @@
+﻿@model OpenEhs.Web.Models.DashboardViewModel
+@{
+    ViewBag.Title = "Dashboard";
+}
+@section head
+{
+    <script src="@Url.Content("~/Scripts/Dashboard.js")" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/dashboard.css")" />
+}
+
+@if (User.IsInRole("OPDClerks") || User.IsInRole("OPDAdmin"))
+{
+<div style="text-align: center; margin-top: 100px;">
+    @Html.ActionLink("Create Patient", "Create", "Patient", null, new { @id = "CreatePatientButton" })
+</div>
+}
+
+@if (User.IsInRole("Physicians") || User.IsInRole("Surgeons") || User.IsInRole("Nurses"))
+{
+<div id="openCheckIns">
+    <fieldset>
+        <legend>Open Checkins</legend>
+        <p>
+            <select id="openCheckInSelect" name="loactionBox">
+                <option>Select Location...</option>
+                @foreach (var loc in Model.GetLocations)
+                {
+                    <option value="@loc.Department">@loc.Department</option>
+                }
+            </select>
+            <input id="showOpenCheckins" type="button" value="Show Checkins" />
+        </p>
+        <div id="openCheckinsList">
+            <table id="searchCheckinResult">
+                <thead>
+                    <tr>
+                        <th class="IdColumn">
+                            ID #
+                        </th>
+                        <th class="NameColumn">
+                            Name
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </fieldset>
+</div>
+}

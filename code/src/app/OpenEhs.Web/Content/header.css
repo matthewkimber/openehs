@@ -1,0 +1,40 @@
+#header {
+    color: #fff;
+    background: #47a5ff;
+    clear: both;
+    font-size: 1.4em;
+    height: 35px;
+}
+
+#header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#header a:hover {
+}
+
+#header a:active {
+    text-shadow: 0px 1px 0px #11f;
+}
+
+#header > div:first-child {
+    float: right;
+    margin-top: 8px;
+    padding-right: 10px;
+}
+
+#header > div:first-child span {
+    display: inline-block;
+    float: left;
+    margin: 0 16px;
+}
+
+#currentUser {
+    color: #fff;
+    float: left;
+}
+
+#loginActionLink {
+    float: left;
+}

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="OpenEhs.Domain"
+                   namespace="OpenEhs.Domain">
+
+  <class name="InvoiceItem" table="InvoiceItem">
+    <id name="Id" column="InvoiceItemID">
+      <generator class="native" />
+    </id>
+    <many-to-one
+          name="Product"
+          column="ProductID"
+          class="Product"
+          not-null="false" />
+    <many-to-one
+          name="Service"
+          column="ServiceID"
+          class="Service"
+          not-null="false" />
+    <property name="Quantity" not-null="false"/>
+    <property name="IsActive" not-null="true"/>
+    <many-to-one name="Invoice" column="InvoiceID" unique="true" cascade="all" />
+  </class>
+</hibernate-mapping>

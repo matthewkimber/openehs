@@ -1,0 +1,72 @@
+<mockup version="1.0" skin="sketch" measuredW="1352" measuredH="835" mockupW="1024" mockupH="768">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="328" y="67" w="1024" h="768" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>OpenEHS</text>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Canvas" x="656" y="336" w="368" h="250" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>square</borderStyle>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::TextInput" x="767" y="395" w="145" h="-1" measuredW="91" measuredH="29" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>kwakou.addo</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::TextInput" x="767" y="459" w="145" h="-1" measuredW="70" measuredH="29" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>********</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="767" y="370" w="-1" h="-1" measuredW="65" measuredH="25" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Username</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="767" y="434" w="-1" h="-1" measuredW="60" measuredH="25" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Password</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Button" x="857" y="523" w="-1" h="-1" measuredW="55" measuredH="28" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Dashboard%26bm%3BDashboard.bmml%26bm%3BDashboard.bmml%26bm%3BDashboard.bmml</href>
+        <text>Login</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Link" x="800" y="488" w="-1" h="-1" measuredW="112" measuredH="25" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Forgot%20Password%3F</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="656" y="304" w="-1" h="-1" measuredW="47" measuredH="32" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Login</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="__group__" x="656" y="586" w="268" h="26" measuredW="268" measuredH="26" zOrder="9" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="13" controlTypeID="com.balsamiq.mockups::Link" x="180" y="1" w="-1" h="-1" measuredW="88" measuredH="25" zOrder="0" locked="false" isInGroup="15">
+          <controlProperties>
+            <text>Register%20now%21</text>
+          </controlProperties>
+        </control>
+        <control controlID="14" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="178" h="25" measuredW="178" measuredH="25" zOrder="1" locked="false" isInGroup="15">
+          <controlProperties>
+            <text>Don%27t%20have%20a%20user%20account%3F</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Image" x="689" y="193" w="302" h="64" measuredW="469" measuredH="98" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <filter>true</filter>
+        <src>../identity/logo/OpenEHS%2520-%2520Logo.png</src>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

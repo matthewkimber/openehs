@@ -1,0 +1,68 @@
+﻿input, select
+{
+    font-size: 1.6em;
+}
+        
+#SearchTerm
+{
+    float: right;
+    width: 400px;
+}
+
+#NewUserButton
+{
+	margin: 10px 0;
+}
+        
+.focusSearchTextbox
+{
+    color: #000;
+}
+            
+.blurSearchTextbox
+{
+    color: #aaa;
+    font-style: italic;
+}
+        
+#UserList
+{
+    width: 100%;
+}
+        
+#UserList tbody tr
+{
+    cursor: pointer;
+}
+        
+#UserList tbody tr:hover
+{
+    background-color: #c0e0ff;
+}
+        
+.usernameColumn
+{
+    font-size: 1.4em;
+}
+        
+.nameColumn
+{
+    font-size: 1.4em;
+}
+        
+.rolesColumn
+{
+    font-size: 1.4em;
+}
+        
+.approvedColumn
+{
+    width: 50px;
+    text-align: center;
+    font-size: 1.4em;
+}
+        
+.striped
+{
+    background-color: #eee;
+}

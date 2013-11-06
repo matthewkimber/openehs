@@ -1,0 +1,47 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-size: 62.5%;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+h1 { font-size: 3.2em; }
+h2 { font-size: 2.4em; }
+h3 { font-size: 2em; }
+h4 { font-size: 1.8em; }
+h5 { font-size: 1.6em; }
+h6 { font-size: 1.4em; }
+p { font-size: 1.2em; }
+label { font-size: 1.2em; }
+
+table 
+{
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+thead
+{
+    border: 1px solid gray;
+}
+
+th
+{
+    background-color: #ccc;
+}
+
+td, th
+{
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+.striped
+{
+    background-color: #eee;
+}

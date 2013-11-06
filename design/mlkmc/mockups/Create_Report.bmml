@@ -1,0 +1,55 @@
+<mockup version="1.0" skin="sketch" measuredW="835" measuredH="304" mockupW="450" mockupH="255">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="375" y="39" w="450" h="255" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>MLKMC%20-%20Reports</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::FieldSet" x="399" y="81" w="250" h="163" measuredW="200" measuredH="170" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Report%20Options</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::ComboBox" x="521" y="126" w="-1" h="-1" measuredW="113" measuredH="25" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Select%20type%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="410" y="125" w="-1" h="-1" measuredW="111" measuredH="25" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Type%20of%20report%3A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::IconLabel" x="721" y="81" w="-1" h="-1" measuredW="46" measuredH="49" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>square</borderStyle>
+        <icon>XIcon%7Csmall</icon>
+        <text>Cancel</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::IconLabel" x="776" y="80" w="-1" h="-1" measuredW="34" measuredH="49" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>square</borderStyle>
+        <icon>HelpIcon%7Csmall</icon>
+        <text>Help</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::ComboBox" x="521" y="166" w="-1" h="-1" measuredW="121" measuredH="25" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Select%20option%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="445" y="165" w="-1" h="-1" measuredW="76" measuredH="25" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Export%20as%3A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Button" x="682" y="208" w="123" h="36" measuredW="113" measuredH="28" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>FrontDesk_Home%26bm%3BFrontDesk_Home.bmml%26bm%3BFrontDesk_Home.bmml%26bm%3BFrontDesk_Home.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22307%2C169%2C430%2C205%22%20href%3D%22FrontDesk_Home.bmml%22%20alt%3D%22FrontDesk_Home%22%20id%3D%228%22/%3E</map>
+        <text>Create%20Report</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

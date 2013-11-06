@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="OpenEhs.Domain"
+                   namespace="OpenEhs.Domain">
+
+  <class name="FeedChart" table="FeedChart">
+    <id name="Id" column="FeedChartID">
+      <generator class="native" />
+    </id>
+    <property name="FeedTime" not-null="true" length="50" />
+    <property name="FeedType" not-null="false" length="50" />
+    <property name="AmountOffered" not-null="true" length="30" />
+    <property name="AmountTaken" not-null="true" length="30" />
+    <property name="Vomit" not-null="true" length="30" />
+    <property name="Urine" not-null="true" />
+    <property name="Stool" not-null="true" />
+    <property name="Comments" not-null="true" />
+
+    <many-to-one name="PatientCheckIn"
+                class="PatientCheckIn"
+                unique="true"
+                column="PatientCheckInID" />
+    
+  </class>
+</hibernate-mapping>

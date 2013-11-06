@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="OpenEhs.Domain"
+                   namespace="OpenEhs.Domain">
+
+  <class name="Surgery" table="Surgery">
+    <id name="Id" column="SurgeryID">
+      <generator class="native" />
+    </id>
+    <property name="StartTime" />
+    <property name="EndTime" />
+    <many-to-one name="Location" column="LocationID" unique="true" cascade="all" />
+    <property name="CaseType" />
+    <many-to-one name="CheckIn" column="PatientCheckInID" unique="true" cascade="all" />
+
+    <!--Many-to-many mapping: Staff-->
+    <bag name="Staff" table="SurgeryStaff" cascade="none" lazy="false">
+      <key column="SurgeryID" />
+      <one-to-many class="SurgeryStaff" />
+    </bag>
+    
+  </class>
+</hibernate-mapping>

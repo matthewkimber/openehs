@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="OpenEhs.Domain"
+                   namespace="OpenEhs.Domain">
+
+  <class name="Immunization" table="Immunization">
+    <id name="Id" column="ImmunizationID">
+      <generator class="native" />
+    </id>
+    <property name="VaccineType" not-null="true" length="255" />
+    <property name="IsActive" not-null="true" />
+
+    <bag name="Patients" table="PatientImmunization" cascade="none" lazy="false">
+      <key column="ImmunizationID" />
+      <one-to-many class="PatientImmunization" />
+    </bag>
+
+  </class>
+</hibernate-mapping>

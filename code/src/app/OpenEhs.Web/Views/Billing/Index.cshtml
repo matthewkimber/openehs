@@ -1,0 +1,84 @@
+﻿@model IEnumerable<OpenEhs.Web.Models.BillingViewModel>
+
+@{
+    ViewBag.Title = "Billing";
+}
+@section head
+{
+	<link href="@Url.Content("~/Content/billing.main.css")" rel="Stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/billing.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#billing-tab").addClass("current");
+        });
+    </script>
+}
+
+<h2>Billing</h2>
+
+<div id="Actions" class="group">
+    <div id="Search" class="group">
+        @using (Html.BeginForm("Index", "Billing"))
+        {
+            <input type="text" name="BillingSearchTextBox" id="BillingSearchTextBox" />
+            <button name="Search" id="SearchBillingButton">Search</button>
+        }
+        <script type="text/javascript">
+            $(function () {
+                $("#BillingSearchTextBox").autocomplete({
+                    source: "/Billing/AutocompleteSuggestions",
+                    minLength: 3,
+                    select: function (event, ui) {
+                        if (ui.item) {
+                            $("#BillingSearchTextBox").val(ui.item.value);
+                            $("form").submit();
+                        }
+                    }
+                });
+            });
+        </script>
+    </div>
+</div>
+<h3>
+Recently Accessed List
+</h3>
+<table>
+    <tr>
+        <th></th>
+        <th>
+            Balance
+        </th>
+        <th>
+            Date
+        </th>
+        <th>
+            Last Name
+        </th>
+        <th>
+            First Name
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+        <td>
+            @String.Format("{0:c}", item.Total - item.PaymentTotal)
+        </td>
+        <td>
+            @String.Format("{0:g}", item.Date)
+        </td>
+        <td>
+            @String.Format("{0}", item.PatientLastName)
+        </td>
+        <td>
+            @String.Format("{0}", item.PatientFirstName)
+        </td>
+    </tr>
+}
+
+</table>

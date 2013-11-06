@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="OpenEhs.Domain"
+                   namespace="OpenEhs.Domain">
+
+  <class name="OutputChart" table="OutputChart">
+    <id name="Id" column="OutputChartID">
+      <generator class="native" />
+    </id>
+    <property name="ChartTime" not-null="true" length="50" />
+    <property name="NGSuctionAmount" not-null="false" length="50" />
+    <property name="NGSuctionColor" not-null="true" length="30" />
+    <property name="UrineAmount" not-null="true" length="30" />
+    <property name="StoolAmount" not-null="true" length="30" />
+    <property name="StoolColor" not-null="true" length="30" />
+
+    <many-to-one name="PatientCheckIn"
+                class="PatientCheckIn"
+                unique="true"
+                column="PatientCheckInID" />
+
+  </class>
+</hibernate-mapping>

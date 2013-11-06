@@ -1,0 +1,53 @@
+<mockup version="1.0" skin="sketch" measuredW="880" measuredH="450" mockupW="450" mockupH="400">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="420" y="40" w="-1" h="-1" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>MLKMC%20-%20Confirm%20Patient</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::HRule" x="435" y="117" w="420" h="-1" measuredW="100" measuredH="5" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="435" y="122" w="-1" h="-1" measuredW="126" measuredH="29" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Confirm%20Patient</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::HRule" x="435" y="151" w="420" h="-1" measuredW="100" measuredH="5" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="669" y="125" w="-1" h="-1" measuredW="186" measuredH="25" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Current%20Patient%3A%20John%20Smith</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::TextArea" x="435" y="199" w="171" h="177" measuredW="200" measuredH="140" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>The%20current%20patient%20is%3A%0A%20%0AJohn%20Smith%0AAge%2025%0A1234%20Oak%20St%0ASuburb%20A%2C%20Accra%0A555-555-1234%0ACard%20%23%3A%20123456</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Paragraph" x="612" y="199" w="243" h="66" measuredW="200" measuredH="140" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Any%20function%20may%20now%20be%20used%20applying%20to%20the%20current%20patient%20selected.</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="612" y="351" w="150" h="25" measuredW="150" measuredH="25" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Not%20the%20right%20patient%3F</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Button" x="762" y="349" w="-1" h="-1" measuredW="74" measuredH="28" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22342%2C309%2C416%2C337%22%20href%3D%22FrontDesk_FindPatient.bmml%22%20alt%3D%22FrontDesk_FindPatient%22%20id%3D%2210%22/%3E</map>
+        <text>Go%20Back</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::ButtonBar" x="430" y="74" w="414" h="31" measuredW="386" measuredH="25" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <hrefs>FrontDesk_Home%26bm%3BFrontDesk_Home.bmml%26bm%3BFrontDesk_Home.bmml%26bm%3BFrontDesk_Home.bmml%2CFrontDesk_Appointments%26bm%3BFrontDesk_Appointments.bmml%26bm%3BFrontDesk_Appointments.bmml%26bm%3BFrontDesk_Appointments.bmml%2CFrontDesk_FindPatient%26bm%3BFrontDesk_FindPatient.bmml%26bm%3BFrontDesk_FindPatient.bmml%26bm%3BFrontDesk_FindPatient.bmml%2CFrontDesk_AddEditPatient%26bm%3BFrontDesk_AddEditPatient.bmml%26bm%3BFrontDesk_AddEditPatient.bmml%26bm%3BFrontDesk_AddEditPatient.bmml%2CFrontDesk_TakeVitals%26bm%3BFrontDesk_TakeVitals.bmml%26bm%3BFrontDesk_TakeVitals.bmml%26bm%3BFrontDesk_TakeVitals.bmml%2C%2C%2CCreate_Report%26bm%3BCreate_Report.bmml%26bm%3BCreate_Report.bmml%26bm%3BCreate_Report.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2210%2C34%2C60%2C65%22%20href%3D%22FrontDesk_Home.bmml%22%20alt%3D%22FrontDesk_Home%22%20id%3D%223_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%2262%2C34%2C111%2C65%22%20href%3D%22FrontDesk_Appointments.bmml%22%20alt%3D%22FrontDesk_Appointments%22%20id%3D%223_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22113%2C34%2C155%2C65%22%20href%3D%22FrontDesk_FindPatient.bmml%22%20alt%3D%22FrontDesk_FindPatient%22%20id%3D%223_2%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22275%2C34%2C324%2C65%22%20href%3D%22FrontDesk_TakeVitals.bmml%22%20alt%3D%22FrontDesk_TakeVitals%22%20id%3D%223_3%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22375%2C34%2C436%2C65%22%20href%3D%22Create_Report.bmml%22%20alt%3D%22Create_Report%22%20id%3D%223_4%22/%3E%0A</map>
+        <selectedIndex>-1</selectedIndex>
+        <size>9</size>
+        <text>Home%2C%20Appts%2C%20Find%2C%20Add/Edit%2C%20Vitals%2C%20Billing%2C%20Meds%2C%20Reports</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

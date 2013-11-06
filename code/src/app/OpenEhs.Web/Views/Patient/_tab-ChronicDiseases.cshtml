@@ -1,0 +1,48 @@
+﻿@model OpenEhs.Web.Models.PatientViewModel
+<div id="chronicDiseasesHeader" class="group">
+    <h2 id="ChronicDiseases">
+        Chronic Diseases</h2>
+    <input class="chronicDiseasesAddButton" id="chronicDiseasesAddButton" name="chronicDiseasesAddButton"
+        type="button" value="Add" />
+</div>
+<div>
+    <ul id="ChronicDiseaseList">
+        @foreach (var disease in Model.Problems) {
+            <li class="group">
+                <div style="float: left;">@disease.Problem.ProblemName</div>
+            </li>
+        }
+    </ul>
+</div>
+
+<div id="addProblemDialog" title="Add Disease for @Model.FirstName @Model.LastName">
+    <form id="addDiseaseForm" action="">
+        <fieldset>
+            <label for="name" class="modal-label">
+                Disease Name:</label>
+			<select name="removeDiseaseSelect" id="addDiseaseName" class="required modal-input text ui-widget-content ui-corner-all">
+            <option value="">Select Disease...</option>
+            @foreach (var all in Model.AllProblems)
+            {
+                <option value="@all.Id">@all.ProblemName</option>
+            }
+            </select>
+
+        </fieldset>
+    </form>
+</div>
+
+<div id="createDiseaseDialog" title="Add New Disease">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="createDiseaseDialogForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Disease Name:
+        </div>
+        <div>
+            <input type="text" name="Diseasename" id="modal_DiseaseName" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+    </fieldset>
+    </form>
+</div>

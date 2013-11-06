@@ -1,0 +1,72 @@
+﻿body
+{
+    font-family: Arial, Sans-Serif;
+}
+
+#footer
+{
+    display: none;
+}
+
+#header 
+{
+    display: none;
+}
+
+#nav
+{
+    display: none;
+}
+
+#PaymentActionButtons
+{
+    display: none;
+}
+
+#PayInFullButton, #SelectActionButton
+{
+    display: none;
+}
+
+#InvoiceHeader
+{
+    clear: both;
+}
+
+#InvoiceBillTo
+{
+    float: left;
+}
+
+#InvoiceBillTo ul
+{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#InvoiceHeaderInformation
+{
+    float: right;
+}
+
+#InvoiceLineItems
+{
+    clear: both;
+    padding-top: 25px;
+}
+
+#InvoiceLineItems table
+{
+    border: 1px solid #000;
+}
+
+#InvoiceLineItems table thead
+{
+    background-color: #ccc;
+}
+
+#InvoiceLineItems table td, #InvoiceLineItems table th
+{
+    padding: 1px;
+} 

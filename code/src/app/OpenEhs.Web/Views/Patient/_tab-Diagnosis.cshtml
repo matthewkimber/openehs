@@ -1,0 +1,56 @@
+﻿@model OpenEhs.Web.Models.PatientViewModel
+<div id="noteHeader" class="group">
+    <h2 id="notes">
+        Diagnosis
+    </h2>
+    <input id="submitNoteButton" name="submitNoteButton" type="button" value="Add Diagnosis" />
+</div>
+<div>
+    <ul id="submittedNoteList">
+        @if (Model.GetOpenCheckin != null)
+        {
+            foreach (var note in Model.GetOpenCheckin.Notes)
+            {
+            <li>@Html.Raw(note.Body)</li><br />
+            }
+        }
+    </ul>
+</div>
+<div id="newNoteDialog" title="Diagnosis">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    
+    <form id="newNoteForm" action="">
+    <fieldset>
+        <div class="modal-label-long">
+        </div>
+        <div id="Notes">
+            <label for="NotesTextBox" id="surgeryNoteLable">
+                <b>Diagnosis</b></label>
+            <textarea rows="30" cols="20" name="NotesTextBox" id="NotesTextBox"></textarea>
+        </div>
+        <fieldset id="templateOptions">
+            <legend>Template Options</legend>
+            <p style="margin-left: 150px;">
+                <b>Select from pre-written:</b>
+            </p>
+            <select id="prewrittenNoteSelect" name="prewrittenNoteBox">
+                <option value="">Select Template...</option>
+                @if (Model.CurrentUser != null)
+                {
+                    foreach (var template in Model.CurrentUser.Templates)
+                    {
+                    <option value="@template.Id">@template.Title</option>
+                    }
+                }
+            </select>
+            <br />
+            <input id="templateNoteCheckBox" type="button" name="saveNoteTemplate" value="Save As New Template" />
+            <!-- Do not delete the div -->
+            <div id="addTempTitleDIV">
+                <!-- Used to add a text box in notes -->
+            </div>
+        </fieldset>
+    </fieldset>
+    </form>
+</div>

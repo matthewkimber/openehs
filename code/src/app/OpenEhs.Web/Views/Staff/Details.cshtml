@@ -1,0 +1,34 @@
+﻿@model OpenEhs.Domain.Staff
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Staff</legend>
+
+    <div class="display-label">FirstName</div>
+    <div class="display-field">@Model.FirstName</div>
+
+    <div class="display-label">MiddleName</div>
+    <div class="display-field">@Model.MiddleName</div>
+
+    <div class="display-label">LastName</div>
+    <div class="display-field">@Model.LastName</div>
+
+    <div class="display-label">PhoneNumber</div>
+    <div class="display-field">@Model.PhoneNumber</div>
+
+    <div class="display-label">LicenseNumber</div>
+    <div class="display-field">@Model.LicenseNumber</div>
+
+    <div class="display-label">IsActive</div>
+    <div class="display-field">@Model.IsActive</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+

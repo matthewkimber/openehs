@@ -1,0 +1,49 @@
+<mockup version="1.0" skin="sketch" measuredW="1032" measuredH="459" mockupW="595" mockupH="400">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="427" y="49" w="-1" h="-1" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <close>true</close>
+        <maximizeRestore>true</maximizeRestore>
+        <minimize>true</minimize>
+        <text>MLKMC%20-%20Clinic%20Supplies%20Inventory</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::HRule" x="442" y="126" w="420" h="-1" measuredW="100" measuredH="5" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::HRule" x="442" y="161" w="420" h="-1" measuredW="100" measuredH="5" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="442" y="131" w="-1" h="-1" measuredW="199" measuredH="29" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Clinic%20Supplies%20Inventory</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::ButtonBar" x="442" y="86" w="-1" h="-1" measuredW="346" measuredH="31" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>Inventory_Pharmacy%26bm%3BInventory_Pharmacy.bmml%26bm%3BInventory_Pharmacy.bmml%26bm%3BInventory_Pharmacy.bmml%2CInventory_ClinicSupplies%26bm%3BInventory_ClinicSupplies.bmml%26bm%3BInventory_ClinicSupplies.bmml%26bm%3BInventory_ClinicSupplies.bmml</hrefs>
+        <selectedIndex>1</selectedIndex>
+        <text>Pharmacy%20Inventory%2C%20Clinic%20Supplies%20Inventory</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::DataGrid" x="445" y="178" w="417" h="153" measuredW="226" measuredH="148" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Supply%20Name%2C%20Quantity%0AHypodermic%20Needle%2C%2031%0ALarge%20Bandage%2C%2012%0ASmall%20Bandage%2C%2027%0ANeosporin%20Cream%2C%209</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Button" x="701" y="346" w="161" h="28" measuredW="168" measuredH="28" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Add%20New%20Supply%20Name</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Button" x="701" y="378" w="161" h="28" measuredW="122" measuredH="28" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Delete%20a%20Supply</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::StickyNote" x="883" y="187" w="139" h="138" measuredW="109" measuredH="123" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>Quanities%20can%20be%20adjusted%20directly%20on%20the%20grid.</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="OpenEhs.Domain"
+                   namespace="OpenEhs.Domain">
+
+  <class name="NoteTemplateCategory" table="NoteTemplateCategory">
+    <id name="Id" column="NoteTemplateCategoryID">
+      <generator class="native" />
+    </id>
+    <property name="Name" column="TemplateCategoryName" not-null="true" length="30" />
+
+    <bag name="Templates" table="Template" cascade="all">
+      <key column="NoteTemplateCategoryId" />
+      <one-to-many class="Template" />
+    </bag>
+    
+  </class>
+</hibernate-mapping>

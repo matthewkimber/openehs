@@ -1,0 +1,46 @@
+﻿@model OpenEhs.Web.Models.UserViewModel
+
+@{
+    ViewBag.Title = "User Management";
+}
+@section head
+{
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/membership/user.index.css")" />
+    <script type="text/javascript" src="@Url.Content("~/Scripts/membership/user.index.js")"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#admin-tab").addClass("current");
+        });
+    </script>
+}
+
+<h2>User Management</h2>
+<div class="group">
+    @using (Html.BeginForm())
+    {
+        <input type="button" id="NewUserButton" name="NewUserButton" value="New User" />
+    }
+    <table id="UserList">
+        <thead>
+            <tr>
+                <th class="usernameColumn">Username</th>
+                <th class="nameColumn">Name</th>
+                <th class="rolesColumn">Roles</th>
+                <th class="approvedColumn">Approved</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var user in Model.Users)
+        {
+            <tr>
+                <td class="usernameColumn">@Html.ActionLink(user.Username, "Details", new { Id = user.Id })</td>
+                <td class="nameColumn">@String.Format("{1}, {0}", user.FirstName, user.LastName)</td>
+                <td class="rolesColumn">@user.Roles.ToString()</td>
+                <td class="approvedColumn">@Html.CheckBox(String.Format("chk_{0}", user.Id), user.IsApproved, new { @class = "approvedCheckbox" })</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    Page: @Html.PageLinks(Model.Users.PageIndex, Model.Users.PageCount, x => Url.Action("Index", new { page = x }))
+</div>

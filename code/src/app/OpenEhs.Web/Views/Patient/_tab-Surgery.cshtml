@@ -1,0 +1,160 @@
+﻿@model OpenEhs.Web.Models.PatientViewModel
+<div id="surgeryHeader" class="group">
+    <h2 id="surgery">
+        New Surgery
+    </h2>
+</div>
+<br />
+<div id="SurgeryStaff">
+    <fieldset class="group" id="surgeryStaffFieldSet">
+        <legend>Surgery Staff</legend>
+        <label>
+            <b>Description: </b>
+        </label>
+        <label id="staffName">
+            <b>Staff Member: </b>
+        </label>
+        <br />
+        <label>
+            Surgeon:</label>
+        <select name="surgeonSelect" id="modal_GetStaffSurgeon" class="selectBackgroundColor">
+            <option value="">Select Staff...</option>
+            @foreach (var staff in Model.Users)
+            {
+                <option value="@staff.Id">@staff.FirstName, @staff.LastName</option>
+            }
+        </select><br />
+        <label>
+            Surgeon Assistant:</label>
+        <select name="surgeonAssistantSelect" id="modal_GetStaffSurgeonAssistant" class="selectBackgroundColor">
+            <option value="">Select Staff...</option>
+            @foreach (var staff in Model.Users)
+            {
+                <option value="@staff.Id">@staff.FirstName, @staff.LastName</option>
+            }
+        </select><br />
+        <label>
+            Anaesthetist:</label>
+        <select name="anaesthetistSelect" id="modal_GetStaffAnaesthetist" class="selectBackgroundColor">
+            <option value="">Select Staff...</option>
+            @foreach (var staff in Model.Users)
+            {
+                <option value="@staff.Id">@staff.FirstName, @staff.LastName</option>
+            }
+        </select><br />
+        <label>
+            Anaesthetist Assistant:</label>
+        <select name="anaesthetistAssistantSelect" id="modal_GetStaffAnaesthetistAssistant" class="selectBackgroundColor">
+            <option value="">Select Staff...</option>
+            @foreach (var staff in Model.Users)
+            {
+                <option value="@staff.Id">@staff.FirstName, @staff.LastName</option>
+            }
+        </select><br />
+        <label>
+            Nurse:</label>
+        <select name="nurseSelect" id="modal_GetStaffNurse" class="selectBackgroundColor">
+            <option value="">Select Staff...</option>
+            @foreach (var staff in Model.Users)
+            {
+                <option value="@staff.Id">@staff.FirstName, @staff.LastName</option>
+            }
+        </select><br />
+        <label>
+            Consultant:</label>
+        <select name="consultantSelect" id="modal_GetStaffConsultant" class="selectBackgroundColor">
+            <option value="">Select Staff...</option>
+            @foreach (var staff in Model.Users)
+            {
+                <option value="@staff.Id">@staff.FirstName, @staff.LastName</option>
+            }
+        </select>
+    </fieldset>
+    <br />
+    <fieldset>
+        <legend>Surgery Time</legend>
+        <label>
+            <b>Start Time</b></label>
+        <label id="surgeryEndTimeLable">
+            <b>End Time</b></label><br />
+        <input id="surgeryStartTime" class="selectBackgroundColor" />
+        <input id="surgeryEndTime" class="selectBackgroundColor" />
+    </fieldset>
+    <br />
+    <fieldset>
+        <legend>Surgery Details</legend>
+        <label>
+            Theatre #:
+        </label>
+        <select name="theatreNumber" id="modal_GetSurgeryLocation" class="selectBackgroundColor">
+            <option value="">Select Theatre...</option>
+            @foreach (var loc in Model.GetLocations)
+            {
+                <option value="@loc.Id">@loc.Department, @loc.RoomNumber</option>
+            }
+        </select><br />
+        
+		<br />
+
+        <div id="caseTypeRadio">
+
+		<label>Case Type:&nbsp &nbsp</label>
+
+            <input type="radio" id="caseType1" name="modal_caseType" value="0" /><label for="caseType1">Emergency</label>
+            <input type="radio" id="caseType2" name="modal_caseType" value="1" /><label for="caseType2">Elective</label>
+        </div>
+        <br />
+    </fieldset>
+</div>
+<!-- <button id="submitSurgery">Complete Surgery</button> -->
+
+<div id="SurgeryNoteTemp">
+	<fieldset>
+		<legend>Template</legend>
+
+		<p style="text-align: center;"><b>Select from pre-written</b></p>
+
+		<select id="surgeryPrewrittenNoteSelect" name="surgeryPrewrittenNoteBox">
+            <option value="">Select Template...</option>
+            @if (Model.CurrentUser != null)
+            {
+                foreach (var template in Model.CurrentUser.Templates)
+                {
+                <option value="@template.Id">@template.Title</option>
+                }
+            }
+        </select>
+
+	</fieldset>
+
+</div>
+
+<div id="SurgeryNotes">
+		<label for="surgeryNoteTextBox" id="surgeryNoteLable"><b>Surgery Notes</b></label>
+		<textarea rows="30" cols="20" name="surgeryNoteTextBox" id="surgeryNoteTextBox">Surgery Notes...</textarea>
+</div>
+
+<div id="surgeryCompleteDIV">
+
+	<input id="templateCheckBox" type="checkbox" name="saveTemplate" value="saveAsTemplate"> Save As Template<br>
+
+	<button id="submitSurgery">
+        Submit Surgery
+	</button>
+
+</div>
+
+<div id="saveAsTemplateDialog" title="Save as surgery template">
+    <ul class="modalErrorContainer" style="display: none">
+    </ul>
+    <form id="saveAsTemplateSurgery" action="">
+    <fieldset>
+        <div class="modal-label-long">
+            Title:
+        </div>
+        <div>
+			<input type="text" name="templateTitle" id="model_templateTitleSurgery" class="required modal-input text ui-widget-content ui-corner-all" />
+        </div>
+    </fieldset>
+    </form>
+</div>

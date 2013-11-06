@@ -1,0 +1,200 @@
+﻿label
+{
+    font-size: 1.4em;
+    display: block;
+}
+
+fieldset
+{
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 10px 20px;
+	margin-top: 10px;
+}
+
+legend
+{
+	font-size: 1.2em;
+}
+
+.fieldGroup
+{
+	float: left;
+	margin: 0 5px 10px 5px;
+}
+
+#crumbs
+{
+	font-size: 1.3em;
+	font-weight: bold;
+	list-style: none;
+	border: 1px solid #999;
+	height: 2.3em;
+	margin: 5px 0 25px 0;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	width: 35%;
+}
+
+#crumbs li
+{
+	float: left;
+	line-height: 2.3em;
+	padding-left: 0.75em;
+	color: #555;
+}
+
+#crumbs li a 
+{
+	display: block;
+	padding: 0 15px 0 0;
+	background: url("../../images/crumbs.gif") no-repeat right center;
+}
+
+#crumbs li a:link, #crumbs li a:visited 
+{
+	text-decoration: none;
+	color: #555;
+}
+
+#crumbs li a:hover, #crumbs li a:focus 
+{
+	color: #47a5ff;
+}
+
+#SubHeading
+{
+	margin: 0 auto 10px auto;
+	width: 650px;
+}
+
+#SubHeading h2
+{
+	color: #333;
+}
+
+#UserActions
+{
+    width: 650px;
+    margin: 0 auto;
+    padding: 10px;
+}
+        
+#UserActions div
+{
+	font-size: 1.4em;
+    float: right;
+}
+
+#UserActions div input
+{
+	font-size: 1.1em;
+	padding: 5px 15px;
+	margin-left: 15px;
+}
+        
+#RoleActions
+{
+    float: right;
+}
+        
+#RoleList
+{
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 0px 0px 10px #ccc;
+    -moz-box-shadow: 0px 0px 10px #ccc;
+    -webkit-box-shadow: 0px 0px 10px #ccc;
+    margin: 20px 0;
+    padding: 10px 20px;
+}
+
+#RoleList ul li
+{
+    margin: 10px 0;
+    padding: 10px 15px;
+    background-color: #ccc;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+        
+#RoleList h4
+{
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+}
+
+.RoleName
+{
+    float: left;
+}
+    
+#tabs input, #tabs select
+{
+    font-size: 1.4em;
+}
+        
+#tabs button
+{
+    font-size: 1.4em;
+}
+        
+#tabs
+{
+    width: 650px;
+    margin: 0 auto;
+}
+        
+#tabs ul
+{
+    font-size: 1.2em;
+}
+
+#PhoneNumber
+{
+	width: 150px;
+}
+
+#EmailAddress
+{
+	width: 250px;
+}
+
+#Address_Street1, #Address_Street2
+{
+	width: 425px;
+}
+  
+#FirstName, #MiddleName, #LastName
+{
+	width: 180px;
+}
+
+#Address_City, #Address_Region
+{
+	width: 150px;
+}
+
+#AddRoleButton
+{
+    padding: 5px 15px;
+}
+
+#AddRoleDialog select
+{
+    font-size: 1.4em;
+    width: 250px;
+}
+
+.RemoveRoleAction
+{
+    cursor: pointer;
+    float: right;
+}

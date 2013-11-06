@@ -1,0 +1,129 @@
+﻿@model OpenEhs.Web.Models.UserDetailsViewModel
+@{
+    ViewBag.Title = "User Details";
+}
+@section head
+{
+        <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/membership/user.details.css")" />
+        <script type="text/javascript" src="@Url.Content("~/Scripts/membership/user.details.js")"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#admin-tab").addClass("current");
+            });
+        </script>
+}
+<ul id="crumbs">
+    <li>@Html.ActionLink("User List", "Index")</li>
+    <li>User: @Model.Username</li>
+</ul>
+<div id="SubHeading"><h2>User Details</h2></div>
+@using (Html.BeginForm())
+{
+<div id="tabs" class="group">
+    <ul>
+        <li><a href="#AccountTab">Account</a></li>
+        <li><a href="#ContactInfoTab">Contact Info.</a></li>
+    </ul>
+    <div id="AccountTab" class="group">
+        <div class="group">
+            <div class="fieldGroup">
+                @Html.LabelFor(m => m.Username)
+                <h2>@Model.Username</h2>
+            </div>
+        </div>
+        <div class="group">
+            <div class="fieldGroup">
+                @Html.LabelFor(m => m.Password)
+                @Html.TextBoxFor(m => m.Password)
+            </div>
+        </div>
+        <div id="RoleList" class="group">
+            <h4>Roles</h4>
+            <ul>
+            @if (Model.Roles.Count > 0)
+            {
+                foreach (var role in Model.Roles)
+                {
+                <li class="group">
+                    <div class="RoleName group">@role.Name</div>
+                    <div class="RemoveRoleAction group"><img src="@Url.Content("~/images/common/icons/16x16/Delete.png")" id="@role.Id" alt="Remove Role" /></div>
+                </li>
+                }
+            }
+            </ul>
+            <div id="RoleActions" class="group">
+                <input id="AddRoleButton" type="button" value="Add Role" />
+                <div id="AddRoleDialog">
+                    <div>
+                        @Html.HiddenFor(m => m.UserId)
+                        @Html.LabelFor(m => m.SelectedRole)
+                        @Html.DropDownListFor(m => m.SelectedRole, Model.AvailableRoles)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ContactInfoTab" class="group">
+        <div>
+            <div class="fieldGroup">
+                @Html.LabelFor(m => m.FirstName)
+                @Html.TextBoxFor(m => m.FirstName)
+            </div>
+            <div class="fieldGroup">
+                @Html.LabelFor(m => m.MiddleName)
+                @Html.TextBoxFor(m => m.MiddleName)
+            </div>
+            <div class="fieldGroup">
+                @Html.LabelFor(m => m.LastName)
+                @Html.TextBoxFor(m => m.LastName)
+            </div>
+        </div>
+        <div>
+            <div class="fieldGroup">
+                @Html.LabelFor(m => m.PhoneNumber)
+                @Html.TextBoxFor(m => m.PhoneNumber)
+            </div>
+            <div class="fieldGroup">
+                @Html.LabelFor(m => m.EmailAddress)
+                @Html.TextBoxFor(m => m.EmailAddress)
+            </div>
+        </div>
+        <fieldset>
+            <legend>Address</legend>
+            <div>
+                <div class="fieldGroup group">
+                    @Html.LabelFor(m => m.Address.Street1)
+                    @Html.TextBoxFor(m => m.Address.Street1)
+                </div>
+            </div>
+            <div>
+                <div class="fieldGroup group">
+                    @Html.LabelFor(m => m.Address.Street2)
+                    @Html.TextBoxFor(m => m.Address.Street2)
+                </div>
+            </div>
+            <div class="group">
+                <div class="fieldGroup group">
+                    @Html.LabelFor(m => m.Address.City)
+                    @Html.TextBoxFor(m => m.Address.City)
+                </div>
+                <div class="fieldGroup group">
+                    @Html.LabelFor(m => m.Address.Region)
+                    @Html.DropDownListFor(m => m.Address.Region, Model.Regions)
+                </div>
+                <div class="fieldGroup group">
+                    @Html.LabelFor(m => m.Address.Country)
+                    @Html.DropDownListFor(m => m.Address.Country, Model.Countries)
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+<div id="UserActions" class="group">
+    <div>
+        @Html.ActionLink("Cancel", "Index")
+        <input type="submit" value="Save" />
+    </div>
+</div>
+}

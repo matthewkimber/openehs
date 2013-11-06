@@ -1,0 +1,49 @@
+<mockup version="1.0" skin="sketch" measuredW="880" measuredH="450" mockupW="450" mockupH="400">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="420" y="40" w="-1" h="-1" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>MLKMC%20-%20Doctor%20Home</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::HRule" x="435" y="117" w="420" h="-1" measuredW="100" measuredH="5" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Image" x="483" y="187" w="324" h="121" measuredW="327" measuredH="157" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>square</borderStyle>
+        <filter>true</filter>
+        <src>./beach.jpg</src>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="483" y="317" w="-1" h="-1" measuredW="305" measuredH="32" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Martin%20Luther%20King%20Memorial%20Clinic</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="483" y="355" w="-1" h="-1" measuredW="126" measuredH="26" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>false</bold>
+        <size>14</size>
+        <text>Doctor%20Home%20Page</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::HRule" x="435" y="152" w="420" h="-1" measuredW="100" measuredH="5" zOrder="5" locked="false" isInGroup="-1"/>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="435" y="122" w="-1" h="-1" measuredW="46" measuredH="29" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Home</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="707" y="127" w="-1" h="-1" measuredW="148" measuredH="25" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Current%20Patient%3A%20None</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::ButtonBar" x="430" y="76" w="400" h="31" measuredW="415" measuredH="25" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>Doctor_Home%26bm%3BDoctor_Home.bmml%26bm%3BDoctor_Home.bmml%26bm%3BDoctor_Home.bmml%2CDoctor_SelectPatient%26bm%3BDoctor_SelectPatient.bmml%26bm%3BDoctor_SelectPatient.bmml%26bm%3BDoctor_SelectPatient.bmml%2CDoctor_PatientRecords%26bm%3BDoctor_PatientRecords.bmml%26bm%3BDoctor_PatientRecords.bmml%26bm%3BDoctor_PatientRecords.bmml%2CDoctor_Diagnosis%26bm%3BDoctor_Diagnosis.bmml%26bm%3BDoctor_Diagnosis.bmml%26bm%3BDoctor_Diagnosis.bmml%2CDoctor_Rx%26bm%3BDoctor_Rx.bmml%26bm%3BDoctor_Rx.bmml%26bm%3BDoctor_Rx.bmml%2C%2C</hrefs>
+        <size>9</size>
+        <text>Home%2C%20Select%20Patient%2C%20Patient%20Records%2C%20Diagnosis%2C%20Rx%2C%20Reports%2C%20Misc</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

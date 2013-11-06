@@ -1,0 +1,195 @@
+﻿@model OpenEhs.Web.Models.PatientViewModel
+@{
+    if (Model.MiddleName != String.Empty)
+    {
+        ViewBag.Title = String.Format("Patient: {2}, {0} {1}", Model.FirstName, Model.MiddleName, Model.LastName);
+    }
+    else
+    {
+        ViewBag.Title = String.Format("Patient: {1}, {0}", Model.FirstName, Model.LastName);
+    }
+}
+@section head
+{
+    <link href="@Url.Content("~/Content/jvert-tabs/jquery-jvert-tabs-1.1.4.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/patient.view.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/patient.css")" rel="Stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-jvert-tabs-1.1.4.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/ckedit/ckeditor.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/ckedit/adapters/jquery.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.form.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.ui.datepicker-en-GB.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.ui.timepicker.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/PrintLabelPatient.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/DYMO.Label.Framework.1.0.beta.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/patient/details.main.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/patient/details.vitals.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/patient/details.visitHistory.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/patient/details.surgery.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/patient/details.rxList.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/patient/details.immunizations.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/patient/details.chronicDiseases.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/patient/details.checkin.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/patient/details.charting.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/patient/details.basic.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/patient/details.allergy.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/patient/details.notes.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/patient/details.pmh.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/patient/details.billing.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#patients-tab").addClass("current");
+        });
+    </script>
+}
+<ul id="crumbs">
+    <li>@Html.ActionLink("Search", "Index")</li>
+    <li>Patient</li>
+</ul>
+<div id="patientViewHeader" class="group">
+    <div id="patientInfo">
+        @if (!String.IsNullOrEmpty(Model.MiddleName))
+        {
+            if (Model.MiddleName.Length + Model.FirstName.Length + Model.LastName.Length > 50)
+            {
+                <h7>@String.Format("{2}, {0} {1}", Model.FirstName, Model.MiddleName, Model.LastName.ToUpper())</h7>
+            }
+            else if(Model.MiddleName.Length + Model.FirstName.Length + Model.LastName.Length > 30)
+            {
+                <h5>@String.Format("{2}, {0} {1}", Model.FirstName, Model.MiddleName, Model.LastName.ToUpper())</h5>
+            }
+            else
+            {
+                <h2>@String.Format("{2}, {0} {1}", Model.FirstName, Model.MiddleName, Model.LastName.ToUpper())</h2>
+            }
+        }
+        else
+        {
+            if (Model.FirstName.Length + Model.LastName.Length > 50)
+            {
+                <h7>@String.Format("{1}, {0}", Model.FirstName, Model.LastName.ToUpper())</h7>
+            }
+            else if (Model.FirstName.Length + Model.LastName.Length > 30)
+            {
+                <h5>@String.Format("{1}, {0}", Model.FirstName, Model.LastName.ToUpper())</h5>
+            }
+            else
+            {
+                <h2>@String.Format("{1}, {0}", Model.FirstName, Model.LastName.ToUpper())</h2>
+            }
+        }
+    </div>
+    <div id="ageInfo">
+        <h3 id="patientAge">
+            Age: @Model.Age</h3>
+    </div>
+    <div id="patientButtons">
+        <input value="New Check-In" id="newCheckInButton" type="button" />
+        <input value="Check Out" id="checkOutButton" type="button" />
+        <input value="Edit Patient" id="editPatientInfoButton" type="button" />
+        <input value="Save Patient" id="savePatientInfoButton" type="button" />
+    </div>
+</div>
+<div id="patientView">
+    @Html.HiddenFor(model => model.PatientId, new { @id = "patientId" })
+    @if (Model.CurrentUser != null)
+    {
+        @Html.HiddenFor(model => model.CurrentUser.Id, new { @id = "staffId" });
+    }
+    <div>
+        <ul>
+            <li><a href="#patientView-Demographics">Demographics</a></li>
+            @if (User.IsInRole("Administrators"))
+            {
+                <li><a href="#patientView-Vitals">Vitals</a></li>
+                <li><a href="#patientView-RxList">Rx List</a></li>
+                <li><a href="#patientView-Immunizations">Immunizations</a></li>
+                <li><a href="#patientView-ChronicDiseases">Chronic Diseases</a></li>
+                <li><a href="#patientView-Allergies">Allergies</a></li>
+                <li><a href="#patientView-Diagnosis">Diagnosis</a></li>
+                <li><a href="#patientView-Charting">Charting</a></li>
+                <li><a href="#patientView-Surgery">New Surgery</a></li>
+                <li><a href="#patientView-PMH">PMH</a></li>
+                <li><a href="#patientView-Billing">Resources</a></li>
+            }
+        </ul>
+    </div>
+    <div>
+        <div id="#patientView-Demographics" class="group">
+            @Html.Partial("_tab-Demographics", Model)
+        </div>
+        <div id="#patientView-Vitals">
+            @Html.Partial("_tab-Vitals", Model)
+        </div>
+        <div id="#patientView-RxList">
+            @Html.Partial("_tab-RxList", Model)
+        </div>
+        <div id="#patientView-Immunizations">
+            @Html.Partial("_tab-Immunizations", Model)
+        </div>
+        <div id="#patientView-ChronicDiseases">
+            @Html.Partial("_tab-ChronicDiseases", Model)
+        </div>
+        <div id="#patientView-Allergy">
+            @Html.Partial("_tab-Allergy", Model)
+        </div>
+        <div id="#patientView-Diagnosis">
+            @Html.Partial("_tab-Diagnosis", Model)
+        </div>
+        <div id="#patientView-Charting">
+            @Html.Partial("_tab-Charting", Model)
+        </div>
+        <div id="#patientView-Surgery">
+            @Html.Partial("_tab-Surgery", Model)
+        </div>
+        <div id="#patientView-PMH">
+            @Html.Partial("_tab-PMH", Model)
+        </div>
+        <div id="#patientView-Billing">
+            @Html.Partial("_tab-Billing", Model)
+        </div>
+    </div>
+    <div id="newCheckinModal" title="Check In Patient @Model.FirstName @Model.LastName">
+        <fieldset>
+            <legend>Enter Checkin Information</legend>
+            <form id="addCheckin" action="">
+            <div id="checkinRadio">
+                <input type="radio" id="checkinType1" name="modal_checkinType" value="0" /><label
+                    for="checkinType1">Outpatient</label>
+                <input type="radio" id="checkinType2" name="modal_checkinType" value="1" /><label
+                    for="checkinType2">Inpatient</label>
+            </div>
+            <label for="location">
+                Location</label>
+            <select name="location" id="modal_checkinLocation">
+                @foreach (var location in Model.GetLocations)
+                {
+                    <option value="@location.Id">@location.Department @location.RoomNumber</option>
+                }
+            </select>
+            <br />
+            <label for="staff">
+                Attending Phsyician</label>
+            <select name="staff" id="modal_checkinStff">
+                @foreach (var staff in Model.GetActivePhysicians)
+                {
+                    <option value="@staff.Id">@staff.LastName , @staff.FirstName</option>
+                }
+            </select>
+            </form>
+        </fieldset>
+    </div>
+    <div id="checkOutModal" title="Check Out">
+        @if (Model.MiddleName != "")
+        {
+            <h2>
+                Are you sure you want to check out @Model.FirstName @Model.MiddleName @Model.LastName?</h2>
+        }
+        else
+        {
+            <h2>
+                Are you sure you want to check out @Model.FirstName @Model.LastName?</h2>
+        }
+    </div>
+</div>

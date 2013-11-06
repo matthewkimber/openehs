@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>OpenEHS - @ViewBag.Title</title>
+		
+		<meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/main.css")" />
+        <link rel="Stylesheet" type="text/css" href="@Url.Content("~/Content/themes/base/jquery-ui.css")" />
+
+        <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/jquery-ui.min.js")" type="text/javascript"></script>
+
+        @RenderSection("head", required: false)
+	</head>
+	<body>
+		<div id="container" class="group">
+			<div id="header" class="group">
+                <div>
+                    @Html.Partial("_LogOnPartial")
+                </div>
+            </div>
+            <div id="nav" class="group">
+                <ul>
+                    <li id="dashboard-tab">
+                        <div>
+                            @Html.ActionLink("Dashboard", "Index", "Dashboard")
+                        </div>
+                        <div class="arrow"></div>
+                    </li>
+                    <li id="patients-tab">
+                        <div>
+                            @Html.ActionLink("Patients", "Index", "Patient")
+                        </div>
+                        <div class="arrow"></div>
+                    </li>
+                    <li id="billing-tab">
+                        <div>
+                            @Html.ActionLink("Billing", "Index", "Billing")
+                        </div>
+                        <div class="arrow"></div>
+                    </li>
+                    <li id="reports-tab">
+                        <div>
+                            @Html.ActionLink("Reports", "Index", "Reports")
+                        </div>
+                        <div class="arrow"></div>
+                    </li>
+                    <li id="admin-tab">
+                        <div>
+                            @Html.ActionLink("Admin", "Index", "Admin")
+                        </div>
+                        <div class="arrow"></div>
+                    </li>
+                    <li id="help-tab">
+                        <div>
+                            @Html.ActionLink("Help", "Index", "Help")
+                        </div>
+                        <div class="arrow"></div>
+                    </li>
+                </ul>
+            </div>
+			<div id="content" class="group">
+                @RenderBody()
+			</div>
+            <div id="push"></div>
+		</div>
+        <div id="footer" class="group">
+            <div id="copyright">Copyright &copy; <a href="http://weber.edu/">Weber State University</a>. All Rights Reserved.</div>
+            <div id="identity" class="group">
+                <h1 id="logo"><img src="@Url.Content("~/images/openehs.logo.png")" alt="OpenEHS" /></h1>
+                <div id="version">Version 0.8</div>
+            </div>
+        </div>
+	</body>
+</html>

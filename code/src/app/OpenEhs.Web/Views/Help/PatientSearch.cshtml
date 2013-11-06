@@ -1,0 +1,58 @@
+﻿@*Author: Kevin Russon*@
+@{
+    ViewBag.Title = "Patient Search";
+}
+@Html.ActionLink("Back to Help", "Index")
+<br />
+<br />
+<h1>Patient Search</h1>
+<br />
+<p>
+The Patient Search field has 2 different search functionalities. Users are able to search for a specific patient record using one search criterion
+ or search for a set of results using one or many search criteria.<br />
+</p>
+<br />
+<br />
+<h3>Searching for a specific record</h3>
+<br />
+<p>
+1. Click on the 'Patients' button<br />
+2. You will be shown a 'Recently Accessed List' of patients<br />
+3. At the top of the page there is a field for performing searches on patient records<br />
+4. Enter text into the search field to search for a specific patient record<br />
+5. After a minimum of 3 characters have been entered into the search field any results matching the entered characters will be returned in a dropdown below the
+search field. For example, type in 'Hans' and you will be presented with a dropdown showing results of any person that has 'Hans' in their first, middle or last name.
+As more characters are entered into the search field the results that are returned will be filtered. See below for a list of search criteria options.<br />
+6. When the desired result is found in the dropdown you can arrow down with the keyboard or select the desired record with the mouse pointer<br />
+7. The desired patient's record will be opened to the 'Demographics' section<br />
+</p>
+<br />
+<br />
+<h3>Searching for a result set</h3>
+<br />
+<p>
+1. Click on the 'Patients' button<br />
+2. You will be shown a 'Recently Accessed List' of patients<br />
+3. At the top of the page there is a field for performing searches on patient records<br />
+4. To search for results using multiple search criteria options enter the keywords separated by spaces. For example, type in 'Hans Adu 1000 1970' click the Search button
+or press Enter. You will be presented with a result set that contains results of anyone with the names 'Hans', or 'Adu', any results with a patient record  number or old
+physical record number that contains '1000', or any person that has a date of birth in '1970'.<br />
+5. You can select the desired patient by clicking the row in the returned result set<br />
+</p>
+<br />
+<br />
+<h3>Search Criteria Options</h3>
+<br />
+<p>
+When searching for a patient you are able to enter any of the criteria items below:<br />
+<br />
+- First name<br />
+- Middle name<br />
+- Last name<br />
+- Phone number<br />
+- Date of Birth<br />
+- Record number<br />
+- Old physical record number<br />
+</p>
+<br />
+@Html.ActionLink("Back to Help", "Index")

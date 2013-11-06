@@ -1,0 +1,17 @@
+Directions to run database script for first time:
+
+	* Only need to follow these steps the first time you run script.
+
+	* Highlight and run CREATE DATABASE OpenEHS_database;
+
+	* Highlight and run USE OpenEHS_database;
+
+	* Highlight and run CREATE USER "OpenEHS_admin"@"localhost" IDENTIFIED BY "password";
+			    GRANT ALL ON OpenEHS_database.* TO "OpenEHS_admin"@"localhost";
+
+	* Highlight and run GRANT USAGE ON *.* TO "OpenEHS_admin"@"localhost";
+
+	* Highlight and run All the tables/triggers/stroed Procs and test data
+
+After you have run it this way all you need to do is just click the lighting bult looking thing and it will do
+everything for you. If you have any questions email me charp5257@gmail.com

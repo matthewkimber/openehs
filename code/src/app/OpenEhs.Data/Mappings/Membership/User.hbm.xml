@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="OpenEhs.Domain"
+                   namespace="OpenEhs.Domain">
+  <class name="User" table="User">
+    <id name="Id" column="UserID">
+      <generator class="native" />
+    </id>
+
+    <property name="FirstName" not-null="true" length="50" />
+    <property name="MiddleName" not-null="false" length="50" />
+    <property name="LastName" not-null="true" length="50" />
+    <property name="PhoneNumber" not-null="false" length="20" />
+    <property name="StaffType" not-null="true" />
+    <property name="LicenseNumber" not-null="false" length="20" />
+
+    <many-to-one name="Address"
+                 class="Address"
+                 column="AddressID"
+                 cascade="all"
+                 unique="true" />
+
+    <bag name="Surgery" table="SurgeryStaff" cascade="none" lazy="false">
+      <key column="UserID" />
+      <one-to-many class="SurgeryStaff" />
+    </bag>
+
+    <bag name="PatientCheckIns" table="PatientCheckIn" cascade="none" lazy="false">
+      <key column="UserID" />
+      <one-to-many class="PatientCheckIn" />
+    </bag>
+
+    <bag name="Templates" table="Template" cascade="all" lazy="false">
+      <key column="UserID" />
+      <one-to-many class="Template" />
+    </bag>
+    
+    <property name="Username" not-null="true" length="30" />
+    <property name="EmailAddress" not-null="false" length="50" />
+    <property name="ApplicationName" not-null="false" length="30" />
+    <property name="Password" not-null="true" length="30" />
+    <property name="PasswordQuestion" not-null="false" length="50" />
+    <property name="PasswordAnswer" not-null="false" length="50" />
+    <property name="DateCreated" not-null="true" />
+    <property name="LastLogin" not-null="false" />
+    <property name="LastActivity" not-null="false" />
+    <property name="LastPasswordChange" not-null="false" />
+    <property name="IsOnline" not-null="true" type="System.Boolean" />
+    <property name="IpAddress" not-null="false" length="20" />
+    <property name="IsLockedOut" not-null="true" type="System.Boolean" />
+    <property name="FailedPasswordAttemptCount" not-null="true" />
+    <property name="IsApproved" not-null="true" type="System.Boolean" />
+    <property name="IsActive" not-null="true" type="System.Boolean" />
+
+    <bag name="Roles" table="UserRole">
+      <key column="UserID" />
+      <many-to-many class="Role" column="RoleID" />
+    </bag>
+    
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="OpenEhs.Domain"
+                   namespace="OpenEhs.Domain">
+  <class name="PatientCheckIn" table="PatientCheckIn" >
+    <id name="Id" column="PatientCheckInID">
+      <generator class="native" />
+    </id>
+    <property name="CheckInTime" not-null="true" />
+    <property name="PatientType" not-null="true" />
+    <property name="CheckOutTime" not-null="false" />
+
+    <many-to-one name="AttendingStaff"
+                 class="User"
+                 column="UserID"
+                 cascade="save-update"
+                 unique="true" />
+    
+    <many-to-one name="Patient" column="PatientID" unique="true" cascade="all" />
+
+    <many-to-one name="Invoice"
+                 class="Invoice"
+                 column="InvoiceID"
+                 cascade="save-update"
+                 unique="true" />
+
+    <property name="IsActive" not-null="true" />
+
+    <bag name="Surgeries" table="Surgery" cascade="all">
+      <key column="PatientCheckInID" />
+      <one-to-many class="Surgery" />
+    </bag>
+
+    <bag name="Vitals" table="Vitals" cascade="all">
+      <key column="PatientCheckInId" />
+      <one-to-many class="Vitals" />
+    </bag>
+
+    <many-to-one name="Location" column="LocationID" unique="true" cascade="all" />
+
+    <bag name="FeedChart" table="FeedChart" cascade="all">
+      <key column="PatientCheckInId" />
+      <one-to-many class="FeedChart" />
+    </bag>
+
+    <bag name="IntakeChart" table="IntakeChart" cascade="all">
+      <key column="PatientCheckInId" />
+      <one-to-many class="IntakeChart" />
+    </bag>
+
+    <bag name="Notes" table="Note" cascade="all">
+      <key column="PatientCheckInId" />
+      <one-to-many class="Note" />
+    </bag>
+
+    <bag name="OutputChart" table="OutputChart" cascade="all">
+      <key column="PatientCheckInId" />
+      <one-to-many class="OutputChart" />
+    </bag>
+  </class>
+</hibernate-mapping>

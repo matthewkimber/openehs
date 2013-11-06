@@ -1,0 +1,99 @@
+﻿@model OpenEhs.Web.Models.PatientViewModel
+<div id="billingHeader" class="group">
+    <h2 id="Billing">
+        Billing</h2>
+</div>
+
+<div id="AddInvoiceItem">
+    <fieldset class="group" id="AddInvoiceItemFieldSet">
+        <legend>Add New Product</legend>
+
+		<p><b>Description: </b> &nbsp &nbsp &nbsp <b>Selection: </b></p>
+
+		<br />
+
+        <label>Product:</label>
+
+        <select name="productSelect" id="modal_GetProduct" class="billingSelects">
+            <option value="">Select Product...</option>
+            @foreach (var product in Model.Products)
+            {
+                <option value="@product.Id">@product.Name</option>
+            }
+        </select><br />
+
+        <label>Quantity:</label>
+
+        <select name="quantitySelect" id="modal_GetQuantity" class="billingSelects">
+            <option value="">Select Quantity...</option>
+            @for(int i=0;i<100;i++)
+            {
+                <option value="@i">@i</option>
+            }
+        </select><br />
+    </fieldset>
+    <br />
+    <button id="submitInvoiceItem">
+    Add New Product</button>
+    <br />
+    <br />
+
+    <fieldset class="group" id="AddInvoiceItemServiceFieldSet">
+        <legend>Add New Service</legend>
+
+		<p><b>Description: </b> &nbsp &nbsp &nbsp <b>Selection: </b></p>
+
+		<br />
+        <label>Service:</label>
+
+        <select name="serviceSelect" id="modal_GetService" class="billingSelects">
+            <option value="">Select Service...</option>
+            @foreach (var service in Model.Services)
+            {
+                <option value="@service.Id">@service.Name</option>
+            }
+        </select><br />
+
+    </fieldset>
+    <br />
+    <button id="submitInvoiceItemService">
+    Add New Service</button>
+</div>
+
+<div id="showLineItems">
+	<fieldset id="showLineItemsFS">
+		<legend>Current Line Items</legend>
+        <br />
+		<table id="detailsTable" class="detailsTable">
+			<thead>
+				<tr>
+					<th>
+						Name
+					</th>
+					<th>
+						Quantity
+					</th>
+				</tr>
+			</thead>
+			@if (Model.CurrentInvoice != null)
+            {
+                foreach (var lineItem in Model.CurrentInvoice.Items)
+                {
+                    <tr>
+                        <td>@if (lineItem.Product == null)
+                            {
+                                @lineItem.Service.Name
+                            }else{
+                                @lineItem.Product.Name
+                            }
+                        </td>
+                        <td>
+                            @lineItem.Quantity
+                        </td>
+                    </tr>
+                }
+            }
+		</table>
+	</fieldset>
+
+</div>
